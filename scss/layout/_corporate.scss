@@ -1,0 +1,120 @@
+.corporate {
+  .if {
+    &-top {
+      margin-bottom: 0;
+    }
+    &-item {
+      &:nth-child(1) {
+        a {
+          &::before {
+            background: url("../assets/img/van-hoa-doanh-nghiep/checklist.svg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+      &:nth-child(2) {
+        a {
+          &::before {
+            background: url("../assets/img/van-hoa-doanh-nghiep/evngenco3.svg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+      &:nth-child(3) {
+        a {
+          &::before {
+            background: url("../assets/img/van-hoa-doanh-nghiep/world.svg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+      &:nth-child(4) {
+        a {
+          &::before {
+            background: url("../assets/img/van-hoa-doanh-nghiep/human.svg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+      a {
+        padding: 1rem;
+        padding-top: 10rem;
+        @include max(1200px) {
+          padding-top: 8rem;
+        }
+      }
+    }
+  }
+  .introduce {
+    &-content {
+      margin-bottom: 0;
+      padding-top: 10rem;
+      background: #f5f5f5;
+      &.tab-content {
+        padding: 0;
+        &-active {
+          &[data-for="tab3"] {
+            padding-top: 10rem;
+            overflow: visible;
+            @include max(1200px) {
+              padding-top: 4rem;
+            }
+          }
+        }
+        &[data-for="tab3"] {
+          .event {
+            padding-top: 25rem;
+            @include max(1200px) {
+              padding-top: 4rem;
+            }
+          }
+        }
+      }
+      &-inner {
+        margin-bottom: 15rem;
+        @include max(1200px) {
+          margin-bottom: 0;
+        }
+      }
+      &-img{
+        margin-bottom: -15rem;
+        @include max(1200px){
+          margin-bottom: 0;
+        }
+      }
+      &-col {
+        &:nth-child(1) {
+          @include max(1200px) {
+            padding-bottom: 3.5rem;
+          }
+        }
+        .title {
+          padding: 0;
+          display: block;
+          h2 {
+            color: #262626;
+            font-size: 2.8rem;
+            font-weight: 600;
+            text-transform: none;
+            font-family: "Be Vietnam Pro";
+            @include max(767px){
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .event {
+    background: #fff;
+  }
+}

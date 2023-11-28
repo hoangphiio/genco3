@@ -1,0 +1,100 @@
+@import url("../assets/font/BeVietNam/stylesheet.css");
+@import url("../assets/font/Oswald/stylesheet.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  ::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 5px;
+    height: 100%;
+  }
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 16px;
+  }
+  :hover::-webkit-scrollbar-thumb {
+    background: #b9b9b9;
+    border-radius: 10px;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 300;
+  font-family: "Be VietNam Pro";
+}
+
+select {
+  border: none;
+  outline: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  &:-webkit-any-link:focus-visible {
+    outline: 0;
+  }
+}
+
+img {
+  width: 100%;
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 114rem; /* Tùy thuộc vào khách hàng yêu cầu */
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 6rem 0;
+  position: relative;
+  @include max(1200px) {
+    padding: 4rem 0;
+  }
+  &.introduce,
+  &.activate,
+  &.organization,
+  &.stock-news,
+  &.bg-sc {
+    background: #f5f5f5;
+  }
+  &.field {
+    @include min(1201px) {
+      padding-top: 25rem;
+    }
+  }
+}
+
+.main {
+  overflow: hidden;
+}
+
+.onscroll {
+  touch-action: none;
+  overflow: hidden;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: none;
+}
+
+::selection {
+  color: #fff;
+  background: #df0024;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="28.023956px" height="28px" viewBox="0 0 28.023956 28" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M28.024 0L28.024 0L28.024 28L0 28L0 0L28.024 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="Group">
+    <g id="evn favicon" clip-path="url(#clip_1)">
+      <path d="M28.024 0L28.024 0L28.024 28L0 28L0 0L28.024 0Z" id="evn-favicon" fill="none" stroke="none" />
+      <path d="M27.3571 14.0001L16.3659 16.352L14.012 27.3324L11.6581 16.352L0.668213 14.0001L11.6581 11.6482L14.012 0.667725L16.3659 11.6482L27.3571 14.0001L27.3571 14.0001Z" id="Đa-giác" fill="#164396" fill-rule="evenodd" stroke="none" />
+      <path d="M14.012 21.9995L12.4473 15.5634L6.00711 14.0001L12.4473 12.4353L14.012 5.99927L15.578 12.4353L22.0196 14.0001L15.578 15.5634L14.012 21.9995L14.012 21.9995Z" id="Đa-giác" fill="#EC1C24" fill-rule="evenodd" stroke="none" />
+      <path d="M14.012 1.0481e-06C21.7506 1.0481e-06 28.024 6.26801 28.024 14C28.024 21.732 21.7506 28 14.012 28C6.27338 28 0 21.732 0 14L0 14C0.00267179 6.26655 6.27609 0.000362641 14.0141 0M14.0141 0.66626C6.64403 0.667383 0.670229 6.63759 0.670977 14.0013C0.671725 21.3651 6.64674 27.3341 14.0168 27.3337C21.3868 27.3333 27.3612 21.3637 27.3612 14L27.3612 14C27.3587 6.63313 21.3814 0.664473 14.0101 0.66626" id="Hình-dạng" fill="#164396" fill-rule="evenodd" stroke="none" />
+      <path d="M14.012 17.3326L13.2296 14.7816L10.6764 13.9999L13.2296 13.2168L14.012 10.6658L14.7957 13.2168L17.3489 13.9999L14.7957 14.7816L14.012 17.3326L14.012 17.3326Z" id="Đa-giác" fill="#FFF100" fill-rule="evenodd" stroke="none" />
+    </g>
+  </g>
+</svg>

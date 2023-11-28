@@ -1,0 +1,271 @@
+.bs {
+  margin-bottom: -17rem;
+  @include max(1200px) {
+    margin-bottom: -8rem;
+  }
+  @include max(767px) {
+    margin-bottom: 0;
+  }
+  &-title {
+    .title {
+      margin-bottom: 7rem;
+      @include max(1200px) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+  .field {
+    &-box {
+      margin: 0;
+      padding-bottom: 10rem;
+      @include max(1024px) {
+        padding-bottom: 8rem;
+      }
+      @include max(767px) {
+        padding-bottom: 0;
+        margin-bottom: 4rem;
+        overflow: hidden;
+        border-radius: 1.4rem;
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+      &.opposite {
+        flex-direction: row-reverse;
+        .field-box-info {
+          margin-left: 0;
+          margin-right: -4rem;
+        }
+      }
+      &-col {
+        padding: 0;
+        width: calc(100% / 2);
+        @include max(767px){
+          width: 100% ;
+        }
+      }
+      &-info {
+        z-index: 2;
+        padding: 6rem;
+        margin-top: 6.5rem;
+        margin-left: -4rem;
+        background: #f7f7f7;
+        position: relative;
+        flex-direction: column;
+        @include flex;
+        @include max(1200px) {
+          height: 100%;
+          padding: 4rem;
+          margin-top: 4rem;
+        }
+        @include max(1024px) {
+          padding: 3rem;
+          margin-top: 2rem;
+        }
+        @include max(767px) {
+          margin-top: 0;
+          margin-left: 0;
+          padding: 2rem;
+        }
+        > a {
+          opacity: 1;
+        }
+        .desc {
+          opacity: 1;
+          min-height: 11.2rem;
+          @include max(1200px) {
+            margin-bottom: 0;
+            min-height: 8.4rem;
+            @include lc(3);
+          }
+          @include max(1024px) {
+            font-size: 1.4rem;
+          }
+        }
+        .btn-view {
+          opacity: 1;
+          margin-top: auto;
+        }
+      }
+    }
+  }
+}
+
+.cus {
+  &-list {
+    flex-wrap: wrap;
+    @include flex-al;
+    .hidden {
+      overflow: hidden;
+      display: none;
+      visibility: hidden;
+    }
+  }
+  &-item {
+    overflow: hidden;
+    position: relative;
+    width: calc(100% / 4);
+    @include min(1201px) {
+      &:hover {
+        .cus-content {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+  &-img {
+    padding-top: 100%;
+    position: relative;
+    img {
+      @include imgCover;
+    }
+  }
+  &-content {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    padding: 4rem;
+    background: rgba(223, 0, 36, 0.8);
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: 1s ease-in-out;
+    transform: translateX(-110%);
+    transform-origin: bottom;
+    @include flex;
+  }
+  &-icon {
+    cursor: pointer;
+    i {
+      top: 2rem;
+      right: 2rem;
+      position: absolute;
+      &:nth-child(1) {
+        transform: rotate(-45deg);
+      }
+      &:nth-child(2) {
+        top: 3.5rem;
+        right: 3.5rem;
+        transform: rotate(-225deg);
+      }
+      &::before {
+        font-weight: 600;
+      }
+    }
+  }
+  &-desc {
+    > p {
+      color: #fff;
+      cursor: pointer;
+      &:nth-child(1) {
+        text-transform: uppercase;
+      }
+      &:nth-child(2) {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.business-2 {
+  .bs {
+    margin: 0;
+    &-bottom {
+      margin-bottom: 5rem;
+    }
+    &-title {
+      h2 {
+        span {
+          font-size: 4.8rem;
+        }
+      }
+    }
+    &-content {
+      h3 {
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: #262626;
+        line-height: 2.6rem;
+      }
+      ul {
+        padding-bottom: 2rem;
+        li {
+          font-size: 1.6rem;
+          line-height: 3rem;
+          font-weight: 300;
+          span {
+            font-weight: 500;
+            text-transform: uppercase;
+          }
+        }
+      }
+      .sub-cp {
+        padding-left: 1rem;
+        &:not(:last-child) {
+          padding-bottom: 2rem;
+        }
+        h3 {
+          font-weight: 600;
+          font-size: 1.6rem;
+          span {
+            text-transform: uppercase;
+          }
+        }
+        p {
+          max-width: 50rem;
+          font-size: 1.6rem;
+          font-weight: 300;
+        }
+      }
+    }
+    &-table {
+      padding-bottom: 2rem;
+      @include max(767px){
+        overflow: auto;
+      }
+      table {
+        width: 100%;
+        background: #f5f9ff;
+        @include max(767px){
+          min-width: 100rem;
+        }
+        tr {
+          &:not(:last-child) {
+            border-bottom: 0.1rem dashed #9cd3ff;
+          }
+          th {
+            font-size: 1.8rem;
+            color: #0b325d;
+            padding: 1.5rem 2.5rem;
+            text-align: left;
+            &:nth-child(3) {
+              min-width: 16rem;
+            }
+          }
+          td {
+            padding: 1.5rem 2.5rem;
+            font-size: 1.6rem;
+            &:nth-child(1) {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    &-content {
+      p {
+        font-weight: 300;
+        &:nth-child(1) {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.customer{
+  padding-top: 10rem;
+}

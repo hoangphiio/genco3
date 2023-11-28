@@ -1,0 +1,330 @@
+.rel {
+  &-list {
+    margin: 0 -2rem;
+    flex-wrap: wrap;
+    @include flex;
+    @include max(1200px) {
+      margin: 0 -0.5rem;
+    }
+    @include max(767px) {
+      row-gap: 1rem;
+      justify-content: center;
+    }
+  }
+  &-item {
+    padding: 0 2rem;
+    width: calc(100% / 3);
+    @include max(1200px) {
+      padding: 0 0.5rem;
+    }
+    @include max(767px) {
+      width: calc(100% / 2);
+    }
+    @include max(500px) {
+      width: 100%;
+    }
+  }
+  &-info {
+    border: 0.1rem solid #e7e7e7;
+    &-time {
+      a {
+        padding: 1rem 2rem;
+        background: #f7f7f7;
+        @include flex-al;
+      }
+      i {
+        display: block;
+        &::before {
+          font-size: 3.3rem;
+          @include max(1200px) {
+            font-size: 3.3rem;
+          }
+        }
+      }
+      span {
+        font-size: 1.6rem;
+        color: #757575;
+        font-weight: 300;
+        line-height: 2.4rem;
+        padding-left: 1rem;
+        @include max(767px) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    &-inner {
+      padding: 2rem;
+      background: #fff;
+    }
+    &-desc {
+      margin-bottom: 2rem;
+      p {
+        min-height: 9.6rem;
+        font-size: 1.6rem;
+        color: #424d54;
+        @include lc(4);
+        @include max(1200px) {
+          min-height: 9.6rem;
+        }
+      }
+    }
+  }
+}
+
+.noti {
+  .ev {
+    &-inner {
+      &-col {
+        &:nth-child(1) {
+          width: 20%;
+          @include max(1200px) {
+            width: 30%;
+          }
+          @include max(400px) {
+            width: 100%;
+          }
+        }
+        &:nth-child(2) {
+          width: 80%;
+          @include max(1200px) {
+            width: 70%;
+          }
+          @include max(400px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .category {
+    &-time {
+      &-box {
+        background: $color-third;
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.position {
+  .nw {
+    &-item {
+      &:nth-child(1) {
+        .nw-col {
+          &:nth-child(1) {
+            @include max(1130px) {
+              width: 40%;
+            }
+            @include max(767px) {
+              width: 100%;
+              margin-top: 2rem;
+            }
+            .content {
+              &-title {
+                h3 {
+                  margin-bottom: 0;
+                  @include max(1130px) {
+                    margin-bottom: 2rem;
+                  }
+                }
+              }
+              &-info {
+                @include max(1130px) {
+                  position: static;
+                  max-width: unset;
+                  padding: 0;
+                  background: transparent;
+                }
+              }
+            }
+          }
+          &:nth-child(2) {
+            @include max(1130px) {
+              width: 60%;
+            }
+            @include max(767px) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .blog {
+    &-time {
+      p {
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
+      }
+    }
+    &-content {
+      height: 100%;
+      padding: 0 3rem;
+      flex-direction: column;
+      justify-content: flex-end;
+      @include flex;
+      @include max(1130px) {
+        height: auto;
+      }
+      h3 {
+        min-height: auto;
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+        line-height: normal;
+        @include lc(2);
+      }
+    }
+  }
+}
+
+.recruitment {
+  .ev {
+    &-inner {
+      @include max(400px) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}
+
+.form-recruitment {
+  .category {
+    &-time {
+      &-box {
+        padding: 0;
+        position: relative;
+        padding-top: 100%;
+        background: transparent;
+        img {
+          @include imgCover;
+        }
+      }
+    }
+  }
+  .ev {
+    &-inner {
+      height: 100%;
+    }
+    &-col {
+      height: 100%;
+    }
+    &-info {
+      height: 100%;
+    }
+    &-content {
+      height: 100%;
+      .box {
+        margin-top: auto;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+        @include flex-btw;
+        a {
+          margin: 0 -0.5rem;
+          @include flex;
+          > * {
+            padding: 0 0.5rem;
+          }
+          span {
+            font-size: 1.6rem;
+            color: #757575;
+            @include max(1200px) {
+              font-size: 1.4rem;
+            }
+          }
+          i {
+            &::before {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .form-popup {
+    &-bg {
+      min-width: 117rem;
+    }
+    .form-block {
+      padding: 4rem;
+      border-radius: 1.2rem;
+      background: #ffffff;
+      box-shadow: 0 0.2rem 1rem rgba(59, 108, 148, 0.2);
+      @include max(1366px) {
+        padding: 2rem;
+      }
+    }
+
+    .ev-title {
+      h3 {
+        color: #0b325d;
+        font-size: 3rem;
+        @include max(1200px) {
+          font-size: 2rem;
+        }
+        &::before {
+          top: 2.2rem;
+        }
+      }
+    }
+    .btn-send {
+      width: fit-content;
+      min-width: 27.4rem;
+      margin: 0 auto;
+      margin-top: 5rem;
+      @include max(1366px) {
+        margin-top: 3rem;
+      }
+    }
+  }
+}
+
+.attach {
+  &-file {
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    background: #f5f9ff;
+    border: 0.1rem dashed #2191eb;
+    flex-wrap: wrap;
+    @include flex-ct;
+    @include max(1366px) {
+      padding: 1.5rem;
+    }
+    @include max(767px) {
+      row-gap: 1rem;
+      flex-direction: column;
+    }
+    &-img {
+      width: 5rem;
+      height: 5rem;
+    }
+    &-content {
+      padding-left: 1rem;
+      a {
+        font-size: 1.4rem;
+        display: block;
+        &:nth-child(2) {
+          font-style: italic;
+          font-weight: 200;
+          color: #2191eb;
+        }
+      }
+    }
+  }
+}
+
+.document-file {
+  .dnw {
+    &-box {
+      display: block;
+    }
+  }
+  .st {
+    &-info {
+      &-block {
+        padding: 0;
+      }
+    }
+  }
+}

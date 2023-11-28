@@ -1,0 +1,31 @@
+@import url("../js/library/aos/aos.css");
+@import url("../js/library/Magific/magnific.css");
+@import url("../js/library/lightgallery/lightgallery-all-min.css");
+@import url("../js/library/swiper/swiper-min.css");
+
+// core
+@import "./core/mixin";
+@import "./core/reset";
+@import "./core/base";
+@import "./core/animation";
+@import "./core/variable";
+
+// component
+@import "./component/header";
+@import "./component/banner";
+@import "./component/footer";
+@import "./component/beadcumb";
+@import "./component/tablist";
+@import "./component/newDetail";
+@import "./component/popup";
+@import "./component/notfound";
+
+// layout
+@import "./layout/home";
+@import "./layout/introduce";
+@import "./layout/investor";
+@import "./layout/bussiness";
+@import "./layout/new";
+@import "./layout/corporate";
+@import "./layout/result";
+@import "./layout/position";

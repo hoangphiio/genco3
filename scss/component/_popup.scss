@@ -1,0 +1,93 @@
+.form {
+  &-popup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    z-index: 100;
+    flex-direction: column;
+    @include flex-ct;
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+      -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+      -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+      transition: opacity 0.3s 0s, visibility 0s 0s;
+      @include max(1050px){
+        padding: 1.5rem;
+      }
+    }
+    &-bg {
+      background: #fff;
+      padding: 4rem;
+      border-radius: 1rem;
+      position: relative;
+      @include max(1366px) {
+        padding: 2rem;
+      }
+      @include max(1200px){
+        padding: 1.5rem;
+      }
+      @include max(767px){
+        height: 100%;
+        border-radius: 0;
+        overflow: hidden auto;
+      }
+      .container {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .contact {
+      padding: 0;
+      &-item {
+        padding: 0;
+        @include max(767px){
+          box-shadow: none;
+        }
+      }
+      &-inner{
+        .company{
+          @include max(767px){
+            padding-right: 2rem;
+          }
+        }
+      }
+      .form {
+        padding: 0;
+        box-shadow: none;
+      }
+    }
+    .search-form-close{
+      @include max(767px){
+        z-index: 1;
+      }
+    }
+  }
+  &-noti {
+    a {
+      color: #fff;
+      display: block;
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      padding: 0.5rem;
+      border-radius: 0.4rem;
+      text-transform: uppercase;
+      &.success {
+        background: #0abf30;
+      }
+      &.error {
+        background: #f24d4c;
+      }
+    }
+  }
+}

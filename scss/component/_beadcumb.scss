@@ -1,0 +1,161 @@
+.bd {
+  background: #fff;
+  &-list {
+    margin: 0 -3rem;
+    flex-wrap: wrap;
+    @include flex-al;
+    @include max(1200px) {
+      margin: 0 -2rem;
+    }
+  }
+  &-item {
+    padding: 1.5rem 2.3rem;
+    position: relative;
+    transition: 0.4s ease-in-out;
+    @include flex;
+    @include max(1200px) {
+      padding: 1.5rem 2rem;
+    }
+    &.active {
+      a {
+        color: $color-third;
+        font-weight: 500;
+      }
+    }
+    &:nth-child(2)::before {
+      content: "\e905";
+      top: 1.5rem;
+      left: 0;
+      position: absolute;
+      font-family: "iconfont";
+    }
+    &.hover {
+      @include min(1201px) {
+        &:hover {
+          background: #f4f4f4;
+          .dot {
+            &::before {
+              background: #0f0e9f;
+            }
+          }
+          .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+          }
+        }
+      }
+      a {
+        display: block;
+      }
+      .dot {
+        padding: 0 0.6rem;
+        &::before {
+          top: 0.6rem;
+        }
+      }
+    }
+    a {
+      color: #424d54;
+      font-size: 1.4rem;
+      transition: 0.4s ease-in-out;
+      @include min(1201px) {
+        &:hover {
+          color: $color-third;
+        }
+      }
+      @include max(1279px) {
+        font-size: 1.3rem;
+      }
+    }
+    .ic-right {
+      top: 1.8rem;
+      right: 0.6rem;
+      display: block;
+      position: absolute;
+      transform: rotate(90deg);
+      transition: 0.4s ease-in-out;
+      @include max(1200px) {
+        right: 0.5rem;
+      }
+      &::before {
+        font-size: 1.2rem;
+      }
+      &.open {
+        transform: rotate(270deg);
+      }
+    }
+    .expand {
+      &.open {
+        + .dropdown {
+          opacity: 1;
+          visibility: visible;
+        }
+        + .dropdown-item-right {
+          opacity: 1;
+          max-height: 10rem;
+          visibility: visible;
+        }
+      }
+    }
+    .dropdown {
+      top: 5.1rem;
+      right: 0;
+      z-index: 10;
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      min-width: 22rem;
+      position: absolute;
+      overflow: hidden;
+      transition: 0.4s ease-in-out;
+      @include max(1024px) {
+        top: 5rem;
+        left: 0;
+        min-width: 20rem;
+        right: inherit;
+      }
+      &-item {
+        position: relative;
+        background: #f4f4f4;
+        border-bottom: 0.1rem solid #eaeaea;
+        @include min(1201px) {
+          &:hover {
+            > a {
+              color: $color-third;
+              background: #fff;
+            }
+            .ic-right {
+              transform: rotate(90deg);
+            }
+            .dropdown-item-right {
+              opacity: 1;
+              overflow: auto;
+              max-height: 13.2rem;
+              visibility: visible;
+            }
+          }
+        }
+        &-right {
+          max-height: 0;
+          opacity: 0;
+          visibility: hidden;
+          transition: max-height 0.4s ease-in-out;
+        }
+        a {
+          color: #3c3c3c;
+          font-size: 1.4rem;
+          font-weight: 300;
+          padding: 1rem 2rem;
+        }
+        .ic-right {
+          top: 1.3rem;
+          right: 2rem;
+          position: absolute;
+          transition: 0.4s ease-in-out;
+        }
+      }
+    }
+  }
+}
+

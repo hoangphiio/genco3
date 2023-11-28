@@ -1,0 +1,204 @@
+.res {
+  &-input {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 0.1rem solid #bdbdbd;
+    position: relative;
+    @include max(1200px) {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+    }
+    input {
+      width: 100%;
+      display: block;
+      font-size: 1.6rem;
+      min-height: 4.6rem;
+      position: relative;
+      background: #fff;
+      padding: 1rem 1.5rem;
+      padding-right: 4.5rem;
+      border-radius: 0.5rem;
+      border: 0.1rem solid #b9b9b9;
+      @include max(1200px) {
+        min-height: auto;
+        font-size: 1.4rem;
+      }
+    }
+    .ic-search {
+      top: 1.2rem;
+      right: 1.5rem;
+      position: absolute;
+      display: block;
+      &::before {
+        font-size: 2.4rem;
+        @include max(1200px) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+  &-inner {
+    margin: 0 -2rem;
+    flex-wrap: wrap;
+    @include flex;
+    @include max(1200px) {
+      margin: 0 -1rem;
+    }
+  }
+  &-col {
+    padding: 0 2rem;
+    @include max(1200px) {
+      padding: 0 1rem;
+    }
+    &:nth-child(1) {
+      width: 30%;
+      @include max(1024px) {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+    }
+    &:nth-child(2) {
+      width: 70%;
+      @include max(1024px) {
+        width: 100%;
+      }
+    }
+  }
+  &-nav {
+    top: 10rem;
+    position: sticky;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: #fafafa;
+    &-list {
+      overflow: hidden;
+      position: relative;
+      &:not(:last-child) {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 0.1rem solid #ececec;
+      }
+    }
+    &-item {
+      h3 {
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        @include max(767px) {
+          font-size: 1.4rem;
+        }
+      }
+      .ic-right {
+        top: -0.5rem;
+        right: -0.5rem;
+        display: block;
+        padding: 1rem;
+        position: absolute;
+        transform: rotate(90deg);
+      }
+      .expand {
+        &.open {
+          + .dropdown {
+            opacity: 1;
+            max-height: 22rem;
+            visibility: visible;
+          }
+        }
+      }
+      .dropdown {
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+        transition: 0.4s ease-in-out;
+        overflow: hidden auto;
+        &-item {
+          padding: 1rem;
+          position: relative;
+          border-radius: 0.5rem;
+          transition: 0.4s ease-in-out;
+          @include min(1201px) {
+            &:hover {
+              background: #fff;
+            }
+          }
+          a {
+            font-size: 1.6rem;
+            @include max(1200px){
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-count {
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    @include flex-btw;
+    @include max(767px){
+      row-gap: 1rem;
+      justify-content: flex-end;
+    }
+    &-item {
+      .text {
+        font-size: 1.3rem;
+        font-weight: 300;
+        color: #8f8f8f;
+      }
+    }
+    &-para {
+      .num {
+        font-size: 2rem;
+      }
+    }
+    &-his {
+      @include flex-al;
+      .select{
+        padding: 0.8rem 1rem;
+        border-radius: 0.5rem;
+        border: 0.08rem solid #b9b9b9;
+        cursor: pointer;
+        &-list{
+          padding: 0;
+          border: 0;
+          border-radius: 0;
+          &::before{
+            top: 1rem;
+          }
+        }
+      }
+    }
+    &-text {
+      padding-right: 1rem;
+    }
+  }
+}
+
+.result {
+  .ev {
+    &-box {
+      margin: 0;
+      margin-bottom: -4rem;
+      flex-wrap: wrap;
+    }
+    &-list {
+      padding: 0;
+      padding-bottom: 4rem;
+      width: 100%;
+    }
+    &-inner {
+      &:nth-child(2) {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        justify-content: flex-end;
+      }
+    }
+    &-time {
+      margin-bottom: 1rem;
+    }
+    &-item {
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+    }
+  }
+}
