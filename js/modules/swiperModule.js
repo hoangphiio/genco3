@@ -215,25 +215,28 @@ export default function swiperModule() {
 
   if (disclosureSwiper) {
     // var y = getParameterByName("y");
-    //  var initIndex = 0;
-    //  if (y != "") {
-    //    var arrY = $(".st-box-number");
-    //    for (var i = 0; i < arrY.length; i++) {
-    //      if ($(arrY[i]).data("year") == y) {
-    //        initIndex = i;
-    //        break;
-    //      }
-    //    }
-    //  }
+    // var initIndex = 0;
+    // if (y != "") {
+    //   var arrY = $(".st-box-number");
+    //   for (var i = 0; i < arrY.length; i++) {
+    //     if ($(arrY[i]).data("year") == y) {
+    //       initIndex = i;
+    //       break;
+    //     }
+    //   }
+    // }
     disclosureSwiper.forEach((item, i) => {
       const swiperMain = item.querySelector(".st-main-tab .swiper");
       const swiperThumb = item.querySelector(".st-disclosure-box .swiper");
 
       const itemThumbs = new Swiper(swiperThumb, {
+        autoHeight: true,
         noSwiping: false,
         allowTouchMove: false,
         slidesPerView: 6,
         spaceBetween: 15,
+        observer: true,
+        observeParents: true,
         navigation: {
           nextEl: ".tabGallery .swiper-button-next",
           prevEl: ".tabGallery .swiper-button-prev",
@@ -256,20 +259,19 @@ export default function swiperModule() {
           },
         },
       });
-      //
+
       const itemMain = new Swiper(swiperMain, {
-        autoheight: true,
+        autoHeight: true,
         noSwiping: false,
         allowTouchMove: false,
         slidesPerView: "auto",
+        observer: true,
+        observeParents: true,
         // initialSlide: initIndex,
-        fadeEffect: {
-          crossFade: true,
-        },
+        effect: "fade",
+        fadeEffect: { crossFade: true },
         grabCursor: true,
-        thumbs: {
-          swiper: itemThumbs,
-        },
+        thumbs: { swiper: itemThumbs },
       });
     });
   }

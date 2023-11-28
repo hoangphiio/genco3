@@ -160,8 +160,10 @@ body {
 }
 
 select {
-  border: none;
   outline: none;
+  border: 0;
+  background: none;
+  -webkit-appearance: none;
 }
 
 a {
@@ -335,6 +337,7 @@ img {
   font-size: 1.6rem;
   margin-left: 0.8rem;
   transition: 0.4s ease-in-out;
+  cursor: default;
 }
 .btn-contact a i {
   transition: 0.4s ease-in-out;
@@ -4858,7 +4861,7 @@ img {
 }
 .activate-info-box::before {
   content: "";
-  top: 5.5rem;
+  top: 2.8rem;
   left: -0.8rem;
   bottom: 0;
   width: 1.4rem;
@@ -5435,10 +5438,10 @@ img {
   justify-content: space-between;
   -webkit-justify-content: space-between;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 767px) {
   .og-tab-list {
-    gap: 1rem;
-    flex-wrap: wrap;
+    gap: 2rem;
+    overflow: auto hidden;
   }
 }
 .og-tab-item {
@@ -5489,6 +5492,7 @@ img {
 @media screen and (max-width: 767px) {
   .og-tab-item a {
     font-size: 1.6rem;
+    white-space: nowrap;
   }
 }
 .og .dnw-top {
@@ -6276,6 +6280,9 @@ img {
 .project .typical-content * {
   font-family: "Be VietNam Pro" !important;
 }
+.project .typical-content img {
+  height: auto !important;
+}
 .project .typical-title {
   margin-bottom: 3rem;
 }
@@ -6504,7 +6511,7 @@ img {
 .st-box-dot span {
   left: 0;
   right: 0;
-  bottom: -5.5rem;
+  bottom: -4.5rem;
   margin: 0 auto;
   display: block;
   position: absolute;
@@ -6542,16 +6549,12 @@ img {
   height: 1.1rem;
   border-radius: 999px;
 }
-.st-info {
-  height: 100%;
-}
 @media screen and (max-width: 800px) {
   .st-info {
     overflow: auto;
   }
 }
 .st-info-block {
-  height: 100%;
   padding: 2rem;
 }
 @media screen and (max-width: 1200px) {

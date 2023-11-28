@@ -130,9 +130,9 @@
     &-list {
       margin-bottom: 3rem;
       @include flex-btw;
-      @include max(400px) {
-        gap: 1rem;
-        flex-wrap: wrap;
+      @include max(767px) {
+        gap: 2rem;
+        overflow: auto hidden;
       }
     }
     &-item {
@@ -180,6 +180,7 @@
         }
         @include max(767px) {
           font-size: 1.6rem;
+          white-space: nowrap;
         }
       }
     }
@@ -841,6 +842,9 @@
     &-content {
       * {
         font-family: "Be VietNam Pro" !important;
+      }
+      img{
+        height: auto !important;
       }
     }
     &-title {

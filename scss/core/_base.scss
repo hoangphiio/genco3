@@ -35,8 +35,10 @@ body {
 }
 
 select {
-  border: none;
   outline: none;
+  border: 0;
+  background: none;
+  -webkit-appearance: none;
 }
 
 a {
