@@ -1,6 +1,5 @@
 export default function swiperModule() {
   const bannerQHNDT = new Swiper(".bn-swiper .swiper", {
-    loop: true,
     speed: 1000,
     autoplay: {
       delay: 5000,
