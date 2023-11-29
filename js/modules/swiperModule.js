@@ -1,21 +1,8 @@
 export default function swiperModule() {
-  const bannerQHNDT = new Swiper(".bn-swiper .swiper", {
-    speed: 1000,
-    autoplay: {
-      delay: 5000,
-    },
-    navigation: {
-      nextEl: ".bn-swiper .swiper-next",
-      prevEl: ".bn-swiper .swiper-prev",
-    },
-  });
-
   const partnerSwiper = new Swiper(".partner-inner .swiper", {
     loop: true,
     speed: 1000,
-    autoplay: {
-      delay: 5000,
-    },
+    autoplay: { delay: 5000 },
     navigation: {
       nextEl: ".partner-inner .swiper-next",
       prevEl: ".partner-inner .swiper-prev",
@@ -45,9 +32,7 @@ export default function swiperModule() {
     slidesPerView: 1,
     speed: 1000,
     effect: "fade",
-    autoplay: {
-      delay: 5000,
-    },
+    autoplay: { delay: 5000 },
     fadeEffect: { crossFade: true },
     pagination: {
       el: ".data-pagination",
