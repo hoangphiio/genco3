@@ -68,6 +68,24 @@
               padding-top: 4rem;
             }
           }
+          .introduce {
+            &-content {
+              &-col {
+                h2 {
+                  animation: fadeInUp 2s ease 0.5s forwards;
+                }
+                .desc {
+                  animation: fadeInUp 2s ease 1s forwards;
+                }
+                .btn-view {
+                  animation: fadeInUp 2s ease 1.5s forwards;
+                }
+              }
+              &-img {
+                animation: fadeInRight 2s ease 2s forwards;
+              }
+            }
+          }
         }
         &[data-for="tab3"] {
           .event {
@@ -84,9 +102,10 @@
           margin-bottom: 0;
         }
       }
-      &-img{
+      &-img {
+        opacity: 0;
         margin-bottom: -15rem;
-        @include max(1200px){
+        @include max(1200px) {
           margin-bottom: 0;
         }
       }
@@ -105,10 +124,17 @@
             font-weight: 600;
             text-transform: none;
             font-family: "Be Vietnam Pro";
-            @include max(767px){
+            opacity: 0;
+            @include max(767px) {
               font-size: 2rem;
             }
           }
+        }
+        .desc {
+          opacity: 0;
+        }
+        .btn-view {
+          opacity: 0;
         }
       }
     }

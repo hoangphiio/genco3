@@ -1,4 +1,16 @@
 export default function swiperModule() {
+  const bannerQHNDT = new Swiper(".bn-swiper .swiper", {
+    loop: true,
+    speed: 1000,
+    autoplay: {
+      delay: 5000,
+    },
+    navigation: {
+      nextEl: ".bn-swiper .swiper-next",
+      prevEl: ".bn-swiper .swiper-prev",
+    },
+  });
+
   const partnerSwiper = new Swiper(".partner-inner .swiper", {
     loop: true,
     speed: 1000,
@@ -81,21 +93,16 @@ export default function swiperModule() {
   const activate = new Swiper(".activate-swiper .swiper", {
     speed: 2000,
     loop: true,
+    noSwiping: false,
+    allowTouchMove: false,
+    slidesPerView: "auto",
     centeredSlides: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
     autoplay: {
       delay: 8000,
     },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      1024: {
-        slidesPerView: 1,
-      },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   });
 

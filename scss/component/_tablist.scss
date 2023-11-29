@@ -110,6 +110,9 @@
           &::before {
             filter: brightness(0) invert(1);
           }
+          span {
+            color: #fff;
+          }
         }
       }
     }
@@ -124,6 +127,7 @@
       text-align: center;
       position: relative;
       text-transform: uppercase;
+      transition: 0.4s ease-in-out;
       @include max(1200px) {
         padding: 1rem;
         padding-top: 8rem;
@@ -681,14 +685,30 @@
     overflow: hidden;
     background: #fff;
     border: 0.1rem solid #e7e7e7;
+    @include min(1201px) {
+      &:hover {
+        img {
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+        .ev {
+          &-content {
+            h3 {
+              color: $color-third;
+            }
+          }
+        }
+      }
+    }
     @include max(1200px) {
       padding: 2rem;
     }
   }
   &-img {
-    padding-top: 100%;
+    overflow: hidden;
+    padding-top: calc((212 / 270) * 100%);
     position: relative;
     img {
+      transition: 0.4s ease-in-out;
       @include imgCover;
     }
   }
@@ -700,6 +720,7 @@
       color: #262626;
       font-size: 1.8rem;
       margin-bottom: 1.5rem;
+      transition: 0.4s ease-in-out;
       @include lc(2);
       @include max(1200px) {
         font-size: 1.6rem;

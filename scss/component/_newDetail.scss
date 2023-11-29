@@ -40,8 +40,8 @@
     }
   }
   &-contact {
+    // gap: 1rem;
     flex-wrap: wrap;
-    gap: 1rem;
     @include flex-al;
     a {
       padding: 0.8rem 1.5rem;
@@ -290,9 +290,9 @@
     margin-top: 2.5rem;
     padding-top: 2.5rem;
     border-top: 0.1rem dashed #c8c8c8;
-    .dnw-contact {
-      justify-content: flex-end;
-    }
+    // .dnw-contact {
+    //   justify-content: flex-end;
+    // }
   }
   &-subtt {
     text-align: right;

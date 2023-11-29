@@ -286,7 +286,6 @@
     border-radius: 0.5rem;
     background: #f5f9ff;
     border: 0.1rem dashed #2191eb;
-    flex-wrap: wrap;
     @include flex-ct;
     @include max(1366px) {
       padding: 1.5rem;

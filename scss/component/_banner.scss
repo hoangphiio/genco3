@@ -107,6 +107,9 @@
       @include max(767px) {
         padding: 2rem;
       }
+      @include max(500px) {
+        padding: 1.5rem;
+      }
     }
     &-inner {
       flex-wrap: wrap;
@@ -122,16 +125,17 @@
       padding-right: 2rem;
       @include max(500px) {
         margin-bottom: 1rem;
+        padding-right: 0;
       }
     }
     &-child {
       opacity: 0;
       position: relative;
       padding-top: calc((175 / 656) * 100%);
-      @include max(500px){
-        padding-top: calc((175 / 656) * 160%)
+      @include max(500px) {
+        padding-top: calc((175 / 656) * 160%);
       }
-      img{
+      img {
         @include imgCover;
       }
     }
@@ -307,10 +311,10 @@
         @include max(1440px) {
           padding-top: calc(48% - 20rem);
         }
-        @include max(1280px){
+        @include max(1280px) {
           padding-top: calc(54% - 20rem);
         }
-        @include max(1200px){
+        @include max(1200px) {
           padding-top: 58.25%;
         }
         @include max(450px) {
