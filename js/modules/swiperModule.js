@@ -44,10 +44,7 @@ export default function swiperModule() {
     slidesPerView: 1,
     centeredSlides: true,
     speed: 1200,
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: { delay: 5000, disableOnInteraction: false },
     effect: "fade",
     noSwiping: true,
     allowTouchMove: false,

@@ -132,20 +132,17 @@ table {
   padding: 0;
 }
 * ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
+  height: 4px;
   border-radius: 5px;
-  height: 100%;
+  -webkit-appearance: none;
 }
 * ::-webkit-scrollbar-track {
   background: #fff;
 }
 * ::-webkit-scrollbar-thumb {
-  background: #ddd;
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 16px;
-}
-* :hover::-webkit-scrollbar-thumb {
-  background: #b9b9b9;
-  border-radius: 10px;
 }
 
 html {
@@ -156,6 +153,9 @@ body {
   font-size: 14px;
   line-height: 1.5;
   font-weight: 300;
+  -moz-text-size-adjust: none;
+       text-size-adjust: none;
+  -webkit-text-size-adjust: none;
   font-family: "Be VietNam Pro";
 }
 
@@ -1201,7 +1201,7 @@ img {
   .hd-nav .menu-box .dropdown-item .ic-right.open + .dropdown-item-right {
     opacity: 1;
     visibility: visible;
-    max-height: 20rem;
+    max-height: 25rem;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2642,7 +2642,6 @@ img {
 }
 .bd-list {
   margin: 0 -3rem;
-  flex-wrap: wrap;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -2654,6 +2653,7 @@ img {
 @media screen and (max-width: 1200px) {
   .bd-list {
     margin: 0 -2rem;
+    overflow: visible auto;
   }
 }
 .bd-item {
@@ -2668,6 +2668,7 @@ img {
 @media screen and (max-width: 1200px) {
   .bd-item {
     padding: 1.5rem 2rem;
+    position: static;
   }
 }
 .bd-item.active a {
@@ -2680,6 +2681,11 @@ img {
   left: 0;
   position: absolute;
   font-family: "iconfont";
+}
+@media screen and (max-width: 1200px) {
+  .bd-item:nth-child(2)::before {
+    display: none;
+  }
 }
 @media screen and (min-width: 1201px) {
   .bd-item.hover:hover {
@@ -2706,6 +2712,7 @@ img {
 .bd-item a {
   color: #424d54;
   font-size: 1.4rem;
+  white-space: nowrap;
   transition: 0.4s ease-in-out;
 }
 @media screen and (min-width: 1201px) {
@@ -2718,6 +2725,11 @@ img {
     font-size: 1.3rem;
   }
 }
+@media screen and (max-width: 1200px) {
+  .bd-item a {
+    margin-right: 1rem;
+  }
+}
 .bd-item .ic-right {
   top: 1.8rem;
   right: 0.6rem;
@@ -2728,7 +2740,7 @@ img {
 }
 @media screen and (max-width: 1200px) {
   .bd-item .ic-right {
-    right: 0.5rem;
+    position: static;
   }
 }
 .bd-item .ic-right::before {
@@ -2743,7 +2755,7 @@ img {
 }
 .bd-item .expand.open + .dropdown-item-right {
   opacity: 1;
-  max-height: 10rem;
+  max-height: 15rem;
   visibility: visible;
 }
 .bd-item .dropdown {
@@ -2758,12 +2770,14 @@ img {
   overflow: hidden;
   transition: 0.4s ease-in-out;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .bd-item .dropdown {
     top: 5rem;
     left: 0;
-    min-width: 20rem;
     right: inherit;
+    min-width: auto;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 .bd-item .dropdown-item {
@@ -4333,7 +4347,7 @@ img {
 @media screen and (max-width: 1200px) {
   .introduce-content-inner {
     margin: 0;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 }
 .introduce-content-col {
@@ -4351,8 +4365,8 @@ img {
   .introduce-content-col:nth-child(1) {
     width: 100%;
     max-width: 80rem;
-    margin-top: 2rem;
     padding: 0 1.5rem;
+    margin-bottom: 2rem;
   }
 }
 .introduce-content-col:nth-child(2) {
@@ -4504,9 +4518,10 @@ img {
     margin-bottom: 2rem;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 767px) {
   .field .tab-wrapper {
     overflow: auto hidden;
+    border-bottom: 0.1rem solid #e7e7e7;
   }
 }
 .field .tab-list {
@@ -4530,9 +4545,11 @@ img {
     justify-content: flex-end;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 767px) {
   .field .tab-list {
+    width: 100%;
     flex-wrap: nowrap;
+    margin-bottom: 0.8rem;
     justify-content: stretch;
   }
 }
@@ -4568,10 +4585,6 @@ img {
 @media screen and (max-width: 767px) {
   .field .tab-list li a {
     font-size: 1.4rem;
-  }
-}
-@media screen and (max-width: 450px) {
-  .field .tab-list li a {
     white-space: nowrap;
   }
 }
@@ -4853,9 +4866,9 @@ img {
     width: 100%;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 767px) {
   .activate .swiper-control {
-    top: 25%;
+    top: 28%;
   }
 }
 .activate .swiper-control > div::after {
@@ -4987,7 +5000,7 @@ img {
 }
 @media screen and (max-width: 767px) {
   .partner-inner {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 }
 .partner-col {
@@ -5016,7 +5029,7 @@ img {
 }
 @media screen and (max-width: 767px) {
   .partner-title {
-    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 .partner-title .desc {
@@ -5476,7 +5489,8 @@ img {
 }
 @media screen and (max-width: 1200px) {
   .og-tab-item {
-    padding-bottom: 1rem;
+    padding-bottom: 0;
+    margin-bottom: 1rem;
   }
 }
 .og-tab-item.tab-active a {
@@ -5625,7 +5639,6 @@ img {
     gap: 1rem;
     margin-left: 0;
     padding-left: 0;
-    min-width: 114rem;
     flex-direction: initial;
     justify-content: stretch;
   }
@@ -5770,6 +5783,7 @@ img {
     min-height: auto;
     text-align: center;
     font-size: 1.4rem;
+    white-space: nowrap;
   }
 }
 .unit-swiper {

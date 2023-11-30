@@ -2,10 +2,10 @@
   background: #fff;
   &-list {
     margin: 0 -3rem;
-    flex-wrap: wrap;
     @include flex-al;
     @include max(1200px) {
       margin: 0 -2rem;
+      overflow: visible auto;
     }
   }
   &-item {
@@ -15,6 +15,7 @@
     @include flex;
     @include max(1200px) {
       padding: 1.5rem 2rem;
+      position: static;
     }
     &.active {
       a {
@@ -28,6 +29,9 @@
       left: 0;
       position: absolute;
       font-family: "iconfont";
+      @include max(1200px) {
+        display: none;
+      }
     }
     &.hover {
       @include min(1201px) {
@@ -58,6 +62,7 @@
     a {
       color: #424d54;
       font-size: 1.4rem;
+      white-space: nowrap;
       transition: 0.4s ease-in-out;
       @include min(1201px) {
         &:hover {
@@ -66,6 +71,9 @@
       }
       @include max(1279px) {
         font-size: 1.3rem;
+      }
+      @include max(1200px) {
+        margin-right: 1rem;
       }
     }
     .ic-right {
@@ -76,7 +84,7 @@
       transform: rotate(90deg);
       transition: 0.4s ease-in-out;
       @include max(1200px) {
-        right: 0.5rem;
+        position: static;
       }
       &::before {
         font-size: 1.2rem;
@@ -93,7 +101,7 @@
         }
         + .dropdown-item-right {
           opacity: 1;
-          max-height: 10rem;
+          max-height: 15rem;
           visibility: visible;
         }
       }
@@ -109,11 +117,12 @@
       position: absolute;
       overflow: hidden;
       transition: 0.4s ease-in-out;
-      @include max(1024px) {
+      @include max(1200px) {
         top: 5rem;
         left: 0;
-        min-width: 20rem;
         right: inherit;
+        min-width: auto;
+        width: fit-content;
       }
       &-item {
         position: relative;
@@ -158,4 +167,3 @@
     }
   }
 }
-

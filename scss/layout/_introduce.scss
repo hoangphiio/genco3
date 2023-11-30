@@ -139,7 +139,8 @@
       position: relative;
       padding-bottom: 1.5rem;
       @include max(1200px) {
-        padding-bottom: 1rem;
+        padding-bottom: 0;
+        margin-bottom: 1rem;
       }
       &.tab-active {
         a {
@@ -269,7 +270,6 @@
       gap: 1rem;
       margin-left: 0;
       padding-left: 0;
-      min-width: 114rem;
       flex-direction: initial;
       justify-content: stretch;
     }
@@ -387,6 +387,7 @@
         min-height: auto;
         text-align: center;
         font-size: 1.4rem;
+        white-space: nowrap;
       }
     }
   }
@@ -843,7 +844,7 @@
       * {
         font-family: "Be VietNam Pro" !important;
       }
-      img{
+      img {
         height: auto !important;
       }
     }

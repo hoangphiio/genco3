@@ -15,7 +15,7 @@
       @include flex;
       @include max(1200px) {
         margin: 0;
-        flex-direction: column-reverse;
+        flex-direction: column;
       }
     }
     &-col {
@@ -28,8 +28,8 @@
         @include max(1200px) {
           width: 100%;
           max-width: 80rem;
-          margin-top: 2rem;
           padding: 0 1.5rem;
+          margin-bottom: 2rem;
         }
       }
       &:nth-child(2) {
@@ -157,8 +157,9 @@
         position: static;
         margin-bottom: 2rem;
       }
-      @include max(450px) {
+      @include max(767px) {
         overflow: auto hidden;
+        border-bottom: 0.1rem solid #e7e7e7;
       }
     }
     &-list {
@@ -171,8 +172,10 @@
       @include max(850px) {
         justify-content: flex-end;
       }
-      @include max(450px) {
+      @include max(767px) {
+        width: 100%;
         flex-wrap: nowrap;
+        margin-bottom: 0.8rem;
         justify-content: stretch;
       }
       li {
@@ -202,8 +205,6 @@
           }
           @include max(767px) {
             font-size: 1.4rem;
-          }
-          @include max(450px) {
             white-space: nowrap;
           }
         }
@@ -441,8 +442,8 @@
       @include max(1024px) {
         width: 100%;
       }
-      @include max(400px) {
-        top: 25%;
+      @include max(767px) {
+        top: 28%;
       }
       > div {
         &::after {
@@ -548,7 +549,7 @@
       margin: 0 -1rem;
     }
     @include max(767px) {
-      flex-direction: column-reverse;
+      flex-direction: column;
     }
   }
   &-col {
@@ -571,7 +572,7 @@
   }
   &-title {
     @include max(767px) {
-      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
     .desc {
       margin-bottom: 1.5rem;

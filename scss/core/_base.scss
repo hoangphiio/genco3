@@ -6,20 +6,18 @@
   margin: 0;
   padding: 0;
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
+    height: 4px;
     border-radius: 5px;
-    height: 100%;
+    -webkit-appearance: none;
   }
+
   ::-webkit-scrollbar-track {
     background: #fff;
   }
   ::-webkit-scrollbar-thumb {
-    background: #ddd;
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 16px;
-  }
-  :hover::-webkit-scrollbar-thumb {
-    background: #b9b9b9;
-    border-radius: 10px;
   }
 }
 
@@ -31,6 +29,8 @@ body {
   font-size: 14px;
   line-height: 1.5;
   font-weight: 300;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
   font-family: "Be VietNam Pro";
 }
 
