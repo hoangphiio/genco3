@@ -10,6 +10,7 @@
     height: 4px;
     border-radius: 5px;
     -webkit-appearance: none;
+    -webkit-overflow-scrolling: touch;
   }
 
   ::-webkit-scrollbar:horizontal {
