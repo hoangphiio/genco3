@@ -4526,7 +4526,7 @@ img {
 }
 @media screen and (max-width: 767px) {
   .field .tab-wrapper {
-    overflow: auto hidden;
+    overflow: scroll;
     border-bottom: 0.1rem solid #e7e7e7;
   }
 }

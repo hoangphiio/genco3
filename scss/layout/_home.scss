@@ -158,7 +158,7 @@
         margin-bottom: 2rem;
       }
       @include max(767px) {
-        overflow: auto hidden;
+        overflow: scroll;
         border-bottom: 0.1rem solid #e7e7e7;
       }
     }
