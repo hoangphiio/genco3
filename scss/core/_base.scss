@@ -12,6 +12,10 @@
     -webkit-appearance: none;
   }
 
+  ::-webkit-scrollbar:horizontal {
+    height: 4px;
+  }
+
   ::-webkit-scrollbar-track {
     background: #fff;
   }
