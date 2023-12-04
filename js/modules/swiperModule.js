@@ -78,9 +78,7 @@ export default function swiperModule() {
     allowTouchMove: false,
     slidesPerView: "auto",
     centeredSlides: true,
-    autoplay: {
-      delay: 8000,
-    },
+    autoplay: { delay: 8000 },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -88,11 +86,11 @@ export default function swiperModule() {
   });
 
   var swiperTab = new Swiper(".tablist-1 .swiper-thumbs", {
+    speed: 1200,
     spaceBetween: 15,
-    freeMode: true,
     breakpoints: {
       0: {
-        slidesPerView: 2.5,
+        slidesPerView: 2,
       },
       768: {
         slidesPerView: 4,
@@ -102,10 +100,8 @@ export default function swiperModule() {
 
   var swiper = new Swiper(".tablist-1 .swiper-slider", {
     loop: true,
-    spaceBetween: 0,
-    thumbs: {
-      swiper: swiperTab,
-    },
+    autoHeight: true,
+    thumbs: { swiper: swiperTab },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -127,10 +123,8 @@ export default function swiperModule() {
 
   var swiper = new Swiper(".tablist-2 .swiper-slider", {
     loop: true,
-    spaceBetween: 0,
-    thumbs: {
-      swiper: swiperTab,
-    },
+    autoHeight: true,
+    thumbs: { swiper: swiperTab },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -148,7 +142,7 @@ export default function swiperModule() {
     spaceBetween: 15,
     breakpoints: {
       0: {
-        slidesPerView: 2.5,
+        slidesPerView: 1.5,
       },
       1024: {
         slidesPerView: 4,
@@ -158,10 +152,8 @@ export default function swiperModule() {
 
   var swiper = new Swiper(".tablist-3 .swiper-slider", {
     loop: true,
-    spaceBetween: 0,
-    thumbs: {
-      swiper: swiperTab,
-    },
+    autoHeight: true,
+    thumbs: { swiper: swiperTab },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -182,10 +174,7 @@ export default function swiperModule() {
     spaceBetween: 30,
     direction: "vertical",
     slidesPerView: "auto",
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
+    // autoplay: { delay: 5000, disableOnInteraction: false },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",

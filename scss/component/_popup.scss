@@ -18,26 +18,25 @@
     @include flex-ct;
     &.visible {
       opacity: 1;
+      padding: 1.5rem;
       visibility: visible;
       -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
       -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
       transition: opacity 0.3s 0s, visibility 0s 0s;
-      @include max(1050px){
-        padding: 1.5rem;
-      }
     }
     &-bg {
-      background: #fff;
+      margin: 1rem;
       padding: 4rem;
+      background: #fff;
       border-radius: 1rem;
       position: relative;
-      @include max(1366px) {
-        padding: 2rem;
-      }
-      @include max(1200px){
+      margin: 2rem;
+      max-height: 73rem;
+      overflow: hidden auto;
+      @include max(1200px) {
         padding: 1.5rem;
       }
-      @include max(767px){
+      @include max(767px) {
         height: 100%;
         border-radius: 0;
         overflow: hidden auto;
@@ -51,13 +50,13 @@
       padding: 0;
       &-item {
         padding: 0;
-        @include max(767px){
+        @include max(767px) {
           box-shadow: none;
         }
       }
-      &-inner{
-        .company{
-          @include max(767px){
+      &-inner {
+        .company {
+          @include max(767px) {
             padding-right: 2rem;
           }
         }
@@ -65,11 +64,6 @@
       .form {
         padding: 0;
         box-shadow: none;
-      }
-    }
-    .search-form-close{
-      @include max(767px){
-        z-index: 1;
       }
     }
   }

@@ -275,20 +275,14 @@
               }
             }
             &-year {
-              a {
-                color: #fff;
-              }
-              .dropdown-select {
-                select {
-                  color: #fff;
-                  option {
-                    color: #424d54;
+              .select {
+                &-list {
+                  .custom-select-trigger {
+                    color: #fff;
                   }
-                }
-              }
-              .ic-right {
-                &::before {
-                  color: #fff;
+                  &::before {
+                    color: #fff;
+                  }
                 }
               }
             }
@@ -348,6 +342,24 @@
     &-year {
       color: #424d54;
       @include flex-al;
+      .select {
+        &-list {
+          border: 0;
+          padding: 0;
+          width: 6rem;
+          border-radius: 0;
+          background: transparent;
+          &::before {
+            top: 0;
+            right: 0.4rem;
+          }
+        }
+      }
+      .custom {
+        &-options {
+          max-height: unset;
+        }
+      }
       a {
         font-size: 1.6rem;
         font-weight: 400;
@@ -356,17 +368,6 @@
         @include max(767px) {
           font-size: 1.4rem;
           padding-right: 1rem;
-        }
-      }
-      .dropdown-select {
-        select {
-          color: #424d54;
-          font-size: 1.6rem;
-          font-weight: 400;
-          padding-right: 2rem;
-          background: transparent;
-          font-family: "Be Vietnam Pro";
-          transition: 0.4s ease-in-out;
         }
       }
       i {
@@ -378,7 +379,7 @@
     }
   }
   &-bottom {
-    height: calc(100% - 10.2rem);
+    height: calc(100% - 8rem);
     padding: 3rem;
     border-radius: 0.8rem;
     background: #fff;
@@ -513,6 +514,9 @@
     img {
       height: 100%;
       transition: 0.8s ease-in-out;
+      @include max(767px) {
+        filter: brightness(1) blur(0.2rem);
+      }
     }
   }
   &-content {
@@ -525,7 +529,9 @@
       padding: 10rem 2rem;
     }
     @include max(767px) {
-      padding: 5rem 2rem;
+      margin: 0;
+      width: 100%;
+      justify-content: center;
     }
     a {
       color: #fff;
@@ -537,7 +543,12 @@
         font-size: 2.4rem;
       }
       @include max(767px) {
-        // font-size: 4rem;
+        font-size: 2rem;
+        color: #df0024;
+        font-weight: 600;
+        padding: 1.5rem 3rem;
+        border-radius: 0.5rem;
+        background: rgba(255, 255, 255, 0.5);
       }
     }
   }
@@ -757,6 +768,7 @@
         color: #fff;
         padding: 1rem 1.2rem;
         text-align: center;
+        cursor: pointer;
         @include max(1200px) {
           font-size: 1.8rem;
           padding: 1rem;
@@ -797,9 +809,13 @@
       @include max(1200px) {
         padding: 4rem;
       }
+      @include max(1024px) {
+        padding: 2rem;
+      }
       @include max(767px) {
-        padding: 0 1.5rem;
         border: 0;
+        margin-top: 2rem;
+        padding: 0 1.5rem;
       }
     }
   }

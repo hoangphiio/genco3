@@ -13,9 +13,6 @@
   }
   &-list {
     @include flex;
-    @include max(1200px) {
-      min-width: 120rem;
-    }
   }
   .swiper {
     &-slide {
@@ -128,13 +125,18 @@
       position: relative;
       text-transform: uppercase;
       transition: 0.4s ease-in-out;
+      white-space: nowrap;
       @include max(1200px) {
         padding: 1rem;
         padding-top: 8rem;
         font-size: 1.8rem;
       }
       @include max(767px) {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+        padding-top: 5.5rem;
+      }
+      @include max(500px) {
+        text-transform: initial;
       }
       &::before {
         content: "";
@@ -148,6 +150,11 @@
         position: absolute;
         transition: 0.4s ease-in-out;
         @include default-background;
+        @include max(767px) {
+          top: 1rem;
+          width: 4rem;
+          height: 4rem;
+        }
       }
       span {
         pointer-events: none;
@@ -189,6 +196,9 @@
           }
           @include max(1055px) {
             padding: 2rem;
+          }
+          @include max(767px) {
+            padding: 1.5rem;
           }
           &::before {
             left: 0;
@@ -243,6 +253,9 @@
           }
           @include max(1055px) {
             padding: 2rem;
+          }
+          @include max(767px) {
+            padding: 1.5rem;
           }
           &::before {
             right: 0;
@@ -355,6 +368,9 @@
         @include flex;
         &:not(:last-child) {
           margin-bottom: 3rem;
+          @include max(767px) {
+            margin-bottom: 0;
+          }
         }
       }
       &-img {
@@ -364,9 +380,15 @@
       &-content {
         padding-left: 3rem;
         width: calc(100% - 4.8rem);
+        @include max(767px) {
+          padding-left: 1.5rem;
+        }
         p {
           color: #424d54;
           font-size: 1.6rem;
+          @include max(767px) {
+            font-size: 1.4rem;
+          }
         }
       }
     }
@@ -534,6 +556,7 @@
       margin-bottom: 2rem;
       @include max(767px) {
         font-size: 1.4rem;
+        margin-bottom: 1.5rem;
       }
       span {
         font-weight: 500;

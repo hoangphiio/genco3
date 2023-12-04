@@ -12,7 +12,6 @@ import lightGalleryModule from "./modules/lightGalleryModule.js";
 import magnificModule from "./modules/magnificModule.js";
 import popupContactModule from "./modules/popupContactModule.js";
 import scrollHeaderModule from "./modules/scrollHeaderModule.js";
-import scrollBreadcumb from "./modules/scrollBreadcumb.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   replaceTextModule();
@@ -29,5 +28,4 @@ window.addEventListener("DOMContentLoaded", () => {
   magnificModule();
   popupContactModule();
   scrollHeaderModule();
-  scrollBreadcumb();
 });

@@ -5,17 +5,18 @@
     @include flex-al;
     @include max(1200px) {
       margin: 0 -2rem;
-      overflow: visible auto;
+      margin-bottom: 0.5rem;
+      overflow: auto hidden;
+      border-bottom: 0.1rem solid #e5e5e5;
     }
   }
   &-item {
     padding: 1.5rem 2.3rem;
     position: relative;
     transition: 0.4s ease-in-out;
-    @include flex;
+    @include flex-al;
     @include max(1200px) {
-      padding: 1.5rem 2rem;
-      position: static;
+      padding: 1rem 2rem;
     }
     &.active {
       a {
@@ -62,18 +63,19 @@
     a {
       color: #424d54;
       font-size: 1.4rem;
-      white-space: nowrap;
       transition: 0.4s ease-in-out;
       @include min(1201px) {
         &:hover {
           color: $color-third;
         }
       }
+      @include max(1200px) {
+        white-space: nowrap;
+      }
       @include max(1279px) {
         font-size: 1.3rem;
       }
       @include max(1200px) {
-        margin-right: 1rem;
       }
     }
     .ic-right {
@@ -84,7 +86,7 @@
       transform: rotate(90deg);
       transition: 0.4s ease-in-out;
       @include max(1200px) {
-        position: static;
+        display: none;
       }
       &::before {
         font-size: 1.2rem;
@@ -107,7 +109,7 @@
       }
     }
     .dropdown {
-      top: 5.1rem;
+      top: 5rem;
       right: 0;
       z-index: 10;
       width: 100%;
@@ -118,16 +120,25 @@
       overflow: hidden;
       transition: 0.4s ease-in-out;
       @include max(1200px) {
-        top: 5rem;
-        left: 0;
-        right: inherit;
+        gap: 4rem;
+        opacity: 1;
+        padding-left: 4rem;
+        visibility: visible;
+        position: static;
         min-width: auto;
         width: fit-content;
+        @include flex-al;
       }
       &-item {
         position: relative;
         background: #f4f4f4;
         border-bottom: 0.1rem solid #eaeaea;
+        @include max(1200px) {
+          gap: 4rem;
+          background: #fff;
+          border-bottom: 0;
+          @include flex-al;
+        }
         @include min(1201px) {
           &:hover {
             > a {
@@ -150,18 +161,49 @@
           opacity: 0;
           visibility: hidden;
           transition: max-height 0.4s ease-in-out;
+          @include max(1200px){
+            gap: 4rem;
+            opacity: 1;
+            max-height: 100%;
+            visibility: visible;
+            @include flex-al;
+          }
         }
         a {
           color: #3c3c3c;
           font-size: 1.4rem;
           font-weight: 300;
           padding: 1rem 2rem;
+          @include max(1200px) {
+            padding: 0;
+          }
         }
         .ic-right {
           top: 1.3rem;
           right: 2rem;
           position: absolute;
           transition: 0.4s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.investor {
+  .bd {
+    &-item {
+      &:nth-child(6) {
+        .dropdown {
+          @include max(1200px) {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+    &-link {
+      .dot {
+        @include max(1200px) {
+          display: none;
         }
       }
     }

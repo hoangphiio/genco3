@@ -132,7 +132,9 @@
       @include flex-btw;
       @include max(767px) {
         gap: 2rem;
+        margin-bottom: 2rem;
         overflow: auto hidden;
+        border-bottom: 0.1rem solid #e5e5e5;
       }
     }
     &-item {
@@ -254,12 +256,12 @@
   &-left {
     height: 100%;
     @include max(767px) {
-      overflow: auto;
+      height: auto;
     }
   }
   &-list {
     height: 100%;
-    overflow: auto;
+    overflow: auto hidden;
     max-height: 50rem;
     margin-left: -100vw;
     padding-left: 100vw;
@@ -268,10 +270,13 @@
     @include flex;
     @include max(767px) {
       gap: 1rem;
+      height: auto;
       margin-left: 0;
       padding-left: 0;
+      padding-bottom: 1rem;
       flex-direction: initial;
       justify-content: stretch;
+      border-bottom: 0.1rem solid #e5e5e5e5;
     }
   }
   &-right {
@@ -305,8 +310,9 @@
               }
             }
           }
-          @include max(450px) {
-            margin-bottom: 0.5rem;
+          @include max(767px) {
+            padding: 0.8rem;
+            margin-bottom: 0.8rem;
             background: rgba(237, 28, 36, 80%);
           }
           &:nth-child(1) {
@@ -320,9 +326,9 @@
             color: #7b7b7b;
             font-size: 1.6rem;
             transition: 0.4s ease-in-out;
-            @include max(450px) {
+            @include max(767px) {
               color: #fff;
-              font-size: 1.4rem;
+              font-size: 1rem;
             }
           }
         }
@@ -405,10 +411,13 @@
       height: 45rem;
       padding: 0;
     }
+    @include max(450px){
+      height: 42rem;
+    }
     .swiper {
       height: 100%;
       &-slide {
-        // height: fit-content !important;
+        height: fit-content !important;
       }
     }
   }
@@ -503,8 +512,10 @@
         }
       }
       .box {
-        cursor: default;
+        flex-wrap: wrap;
+        row-gap: 1rem;
         padding-bottom: 1rem;
+        cursor: default;
         @include flex-btw;
         a {
           padding: 0 3rem;

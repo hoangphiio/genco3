@@ -6,18 +6,16 @@
   margin: 0;
   padding: 0;
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 4px;
     height: 4px;
     border-radius: 5px;
     -webkit-appearance: none;
     -webkit-appearance: scrollbar;
     -webkit-overflow-scrolling: touch;
   }
-
   ::-webkit-scrollbar:horizontal {
     height: 4px;
   }
-
   ::-webkit-scrollbar-track {
     height: 4px !important;
     background: #fff;

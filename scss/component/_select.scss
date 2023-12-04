@@ -1,0 +1,133 @@
+.select {
+  width: fit-content;
+  margin: 0 0 0 auto;
+  margin-top: auto;
+  position: relative;
+  &-list {
+    width: 26.5rem;
+    background: #fff;
+    position: relative;
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    border: 0.08rem solid #b9b9b9;
+    cursor: pointer;
+    &::before {
+      content: "\e905";
+      top: 1rem;
+      right: 1.5rem;
+      color: #7b7b7b;
+      font-size: 1.2rem;
+      position: absolute;
+      font-family: "iconfont";
+      transform: rotate(90deg);
+      transition: 0.4s ease-in-out;
+    }
+    .list-item {
+      z-index: 1;
+      max-height: 15rem;
+    }
+    &.open {
+      .list-item {
+        opacity: 1;
+        visibility: visible;
+        transition: 0.4s ease-in-out;
+      }
+    }
+  }
+  &-title {
+    width: 100%;
+    font-size: 1.4rem;
+    position: relative;
+    padding-right: 4.5rem;
+    @include lc(1);
+    @include max(350px) {
+      min-width: auto;
+    }
+  }
+  ul {
+    z-index: 5;
+    width: 100%;
+    top: 5.5rem;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    overflow-y: auto;
+    position: absolute;
+    transition: 0.4s ease-in-out;
+    li {
+      padding: 1rem;
+      font-size: 1.6rem;
+      border-radius: 0.5rem;
+      &:hover {
+        box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+.custom {
+  &-select {
+    &.opened {
+      .custom {
+        &-options {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+          transform: translateY(0);
+          span {
+            display: block;
+          }
+        }
+      }
+      &::before {
+        transform: rotate(270deg);
+      }
+    }
+    span {
+      display: block;
+      position: relative;
+    }
+  }
+  &-options {
+    z-index: 3;
+    top: 100%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    max-height: 9.5rem;
+    display: block;
+    margin-top: 1rem;
+    overflow: hidden auto;
+    background: #fff;
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #b5b5b5;
+    transition: all 0.4s ease-in-out;
+    transform: translateY(-1.5rem);
+    span {
+      overflow: hidden;
+      padding: 0.8rem 1rem;
+      transition: 0.4s ease-in-out;
+      &:not(:last-child) {
+        border-bottom: 0.1rem solid #b9b9b9;
+      }
+      @include min(1201px) {
+        &:hover {
+          color: #fff;
+          background: #b9b9b9;
+        }
+      }
+    }
+  }
+  &-option {
+    &.selection {
+      color: #fff;
+      background: #b9b9b9;
+    }
+  }
+}

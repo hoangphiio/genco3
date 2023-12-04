@@ -23,6 +23,10 @@
         min-height: auto;
         font-size: 1.4rem;
       }
+      &:focus{
+        outline: 0;
+        border-color: $color-third;
+      }
     }
     .ic-search {
       top: 1.2rem;
@@ -106,6 +110,7 @@
         &.open {
           + .dropdown {
             opacity: 1;
+            margin-top: 1rem;
             max-height: 22rem;
             visibility: visible;
           }
@@ -124,7 +129,13 @@
           transition: 0.4s ease-in-out;
           @include min(1201px) {
             &:hover {
-              background: #fff;
+              background: #efefef;
+            }
+          }
+          &.selected {
+            background: $color-third;
+            a {
+              color: #fff;
             }
           }
           a {
@@ -141,9 +152,11 @@
     margin-bottom: 3rem;
     flex-wrap: wrap;
     @include flex-btw;
+    @include max(1024px) {
+      margin-bottom: 2rem;
+    }
     @include max(767px) {
-      row-gap: 1rem;
-      justify-content: flex-end;
+      gap: 1rem;
     }
     &-item {
       .text {
@@ -160,16 +173,10 @@
     &-his {
       @include flex-al;
       .select {
-        padding: 0.8rem 1rem;
-        border-radius: 0.5rem;
-        border: 0.08rem solid #b9b9b9;
-        cursor: pointer;
         &-list {
-          padding: 0;
-          border: 0;
-          border-radius: 0;
-          &::before {
-            top: 1rem;
+          @include max(400px) {
+            width: auto;
+            padding-right: 3rem;
           }
         }
       }
@@ -180,7 +187,7 @@
   }
 }
 
-.result { 
+.result {
   &.main {
     overflow: visible;
     @include max(767px) {

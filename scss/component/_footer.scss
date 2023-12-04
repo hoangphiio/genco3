@@ -16,12 +16,15 @@
   &-top {
     padding: 6rem 0;
     position: relative;
-    @include max(1200px) {
+    @include max(582px) {
       padding: 4rem 0;
     }
   }
   &-logo {
-    padding-bottom: 5rem;
+    padding-bottom: 6rem;
+    @include max(582px){
+      padding-bottom: 4rem;
+    }
     a {
       width: 27rem;
       height: 6rem;
@@ -142,6 +145,8 @@
     }
     &:nth-child(3) {
       width: 40%;
+      flex-direction: column;
+      @include flex;
       @include max(1120px) {
         width: 50%;
       }
@@ -155,7 +160,7 @@
         @include max(1120px) {
           margin-bottom: 3.5rem;
         }
-        @include max(767px){
+        @include max(767px) {
           margin-bottom: 2rem;
         }
         &-item {
@@ -194,6 +199,12 @@
     .box {
       flex-wrap: wrap;
       @include flex-al;
+    }
+    .select {
+      @include max(1120px) {
+        margin: 0;
+        margin-top: auto;
+      }
     }
   }
   &-bottom {

@@ -558,13 +558,6 @@
       @include max(767px) {
         margin-bottom: 1rem;
       }
-      ul {
-        padding: 1rem;
-        box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
-        li {
-          font-size: 1.4rem;
-        }
-      }
       &-text {
         color: #757575;
         font-size: 1.6rem;
@@ -572,13 +565,6 @@
       }
       &-list {
         width: 100%;
-        position: relative;
-        &::before {
-          display: none;
-        }
-        .list-item {
-          width: 100% !important;
-        }
       }
       &-wrap {
         width: calc(100% / 2);
@@ -595,6 +581,11 @@
           padding-left: 1rem;
           @include max(767px) {
             padding-left: 0;
+          }
+        }
+        .custom{
+          &-options{
+            max-height: 20rem;
           }
         }
       }

@@ -12,6 +12,9 @@ export default function menuModule() {
     // Add open class
     menuBtn.classList.toggle("open");
     menuItems.classList.toggle("open");
+    overlay.onclick = () => {
+      closeMenu();
+    };
     if ($(".searchForm").hasClass("active")) {
       $(".searchForm").removeClass("active");
       overlay.classList.toggle("open");
@@ -22,8 +25,6 @@ export default function menuModule() {
     e.stopPropagation();
     toggle();
   });
-
-  menuBtn.onclick = overlay.onclick = closeMenu();
 
   // mobile menu expand
   expandBtn.forEach((btn) => {

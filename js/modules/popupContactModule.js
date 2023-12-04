@@ -8,7 +8,7 @@ export default function popupContactModule() {
     if (
       $(event.target).is(".form-popup1") ||
       $(event.target).is(".btnCloseForm1") ||
-      $(event.target).is(".searchClose1")
+      $(event.target).is(".searchClose1 .ic-close")
     ) {
       event.preventDefault();
       $(this).removeClass("visible");
@@ -24,7 +24,7 @@ export default function popupContactModule() {
     if (
       $(event.target).is(".form-popup2") ||
       $(event.target).is(".btnCloseForm2") ||
-      $(event.target).is(".searchClose2")
+      $(event.target).is(".searchClose2 .ic-close")
     ) {
       event.preventDefault();
       $(this).removeClass("visible");
