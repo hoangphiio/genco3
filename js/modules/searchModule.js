@@ -1,5 +1,5 @@
 export default function searchModule() {
-  const hdSearch = document.querySelector(".hd-search");
+  const hdSearch = document.querySelector(".search");
   const searchForm = document.querySelector(".searchForm");
   const searchClose = document.querySelector(".search-form-close");
   const overlay = document.querySelector(".overlay");

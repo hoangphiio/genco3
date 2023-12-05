@@ -1,4 +1,8 @@
 export default function selectDropdownModule() {
+  $("#select-footer").change(function () {
+    var url = $("#select-footer").val();
+    window.open(url, "blank");
+  });
   $(".custom-select").each(function () {
     var classes = $(this).attr("class"),
       id = $(this).attr("id"),
@@ -27,26 +31,20 @@ export default function selectDropdownModule() {
     $(this).hide();
     $(this).after(template);
   });
-  $(".custom-option:first-of-type").hover(
-    function () {
-      $(this).parents(".custom-options").addClass("option-hover");
-    },
-    function () {
-      $(this).parents(".custom-options").removeClass("option-hover");
-    }
-  );
-  $(".custom-select-trigger").on("click", function () {
+
+  $(".custom-select-trigger").on("click", function (event) {
     $("html").one("click", function () {
       $(".custom-select").removeClass("opened");
     });
     $(this).parents(".custom-select").toggleClass("opened");
     event.stopPropagation();
   });
+
   $(".custom-option").on("click", function () {
-    $(this)
-      .parents(".custom-select-wrapper")
-      .find("select")
-      .val($(this).data("value"));
+    var value = $(this).data("value");
+    var $select = $(this).parents(".custom-select-wrapper").find("select");
+    $select.val(value);
+    $select.trigger("change"); // Trigger the change event on the select element
     $(this)
       .parents(".custom-options")
       .find(".custom-option")

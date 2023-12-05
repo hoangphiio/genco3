@@ -861,6 +861,11 @@ img {
   font-weight: 400;
   line-height: 4.7rem;
 }
+@media screen and (max-width: 1200px) {
+  .hd-nav li a {
+    line-height: 4rem;
+  }
+}
 @media screen and (max-width: 767px) {
   .hd-nav li a {
     line-height: 3rem;
@@ -936,12 +941,11 @@ img {
   font-size: 2.6rem;
 }
 .hd-nav .menu > li > a p {
-  margin-right: 0.8rem;
+  margin-right: 0.4rem;
 }
 @media screen and (max-width: 1200px) {
   .hd-nav .menu > li > a p {
     font-size: 2.4rem;
-    margin-right: 0;
   }
 }
 @media screen and (max-width: 767px) {
@@ -986,6 +990,7 @@ img {
   }
   .hd-nav .menu-dropdown:hover .menu-box {
     opacity: 1;
+    overflow: hidden;
     visibility: visible;
     transition-delay: 0.8s;
     transform: translateX(0);
@@ -1065,6 +1070,7 @@ img {
     min-width: auto;
     transform: none;
     position: static;
+    overflow: hidden;
     transition: max-height 0.6s ease-out, opacity 0.6s;
   }
 }
@@ -1298,11 +1304,6 @@ img {
   background-color: #fafafa;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
-@media screen and (max-width: 1024px) {
-  .hd-contact .search-form-wrap {
-    width: auto;
-  }
-}
 @media screen and (max-width: 767px) {
   .hd-contact .search-form-wrap {
     width: 30rem;
@@ -1312,10 +1313,10 @@ img {
 .hd-contact .search-form-wrap input {
   width: 100%;
   padding: 1rem 1.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.16);
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   margin-bottom: 2rem;
   background-color: #fff;
+  border: 0.1rem solid rgba(0, 0, 0, 0.16);
 }
 @media screen and (max-width: 767px) {
   .hd-contact .search-form-wrap input {
@@ -1368,6 +1369,11 @@ img {
   color: #757575;
   font-size: 1.6rem;
   margin-bottom: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .hd-contact .select-text {
+    font-size: 1.4rem;
+  }
 }
 .hd-contact .select-list {
   width: 100%;
@@ -2315,6 +2321,7 @@ img {
   font-size: 1.6rem;
   padding-left: 3rem;
   position: relative;
+  cursor: default;
 }
 @media screen and (max-width: 1120px) {
   .ft-col:nth-child(1) a:not(.mb),
@@ -2516,6 +2523,7 @@ img {
   -ms-align-items: center;
   align-items: center;
   -webkit-align-items: center;
+  cursor: default;
 }
 @media screen and (max-width: 680px) {
   .ft-license p {
@@ -4101,6 +4109,20 @@ img {
     min-width: 18rem;
   }
 }
+.dnw-video {
+  position: relative;
+  padding-top: 56.25%;
+}
+.dnw-video iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .dnw-bottom {
   margin-top: 2.5rem;
   padding-top: 2.5rem;
@@ -4470,6 +4492,8 @@ img {
 
 @media screen and (min-width: 1201px) {
   .introduce-content {
+    z-index: 3;
+    position: relative;
     margin-bottom: -25rem;
   }
 }

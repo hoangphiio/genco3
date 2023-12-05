@@ -1,6 +1,8 @@
 .introduce {
   &-content {
     @include min(1201px) {
+      z-index: 3;
+      position: relative;
       margin-bottom: -25rem;
     }
     &-container {

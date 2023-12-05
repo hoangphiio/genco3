@@ -63,6 +63,7 @@
         font-size: 1.6rem;
         padding-left: 3rem;
         position: relative;
+        cursor: default;
         @include max(1120px) {
           font-size: 1.4rem;
         }
@@ -231,6 +232,7 @@
       line-height: 1.6rem;
       font-size: 1.3rem;
       @include flex-al;
+      cursor: default;
       @include max(680px) {
         text-align: center;
       }

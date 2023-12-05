@@ -2,6 +2,7 @@ export default function popupContactModule() {
   $(".btnOpenForm1").on("click", function (event) {
     event.preventDefault();
     $(".form-popup1").addClass("visible");
+    $("body").addClass("onscroll");
   });
 
   $(".form-popup1").on("click", function (event) {
@@ -12,12 +13,14 @@ export default function popupContactModule() {
     ) {
       event.preventDefault();
       $(this).removeClass("visible");
+      $("body").removeClass("onscroll");
     }
   });
 
   $(".btnOpenForm2").on("click", function (event) {
     event.preventDefault();
     $(".form-popup2").addClass("visible");
+    $("body").addClass("onscroll");
   });
 
   $(".form-popup2").on("click", function (event) {
@@ -28,6 +31,7 @@ export default function popupContactModule() {
     ) {
       event.preventDefault();
       $(this).removeClass("visible");
+      $("body").removeClass("onscroll");
     }
   });
 }

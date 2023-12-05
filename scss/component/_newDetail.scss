@@ -116,7 +116,7 @@
     * {
       font-family: "Be Vietnam Pro" !important;
     }
-    img{
+    img {
       height: auto !important;
     }
     table {
@@ -147,7 +147,7 @@
       @include max(1200px) {
         width: 100%;
       }
-      @include max(767px){
+      @include max(767px) {
         margin-bottom: 2rem;
       }
       .img {
@@ -285,6 +285,13 @@
           }
         }
       }
+    }
+  }
+  &-video {
+    position: relative;
+    padding-top: 56.25%;
+    iframe {
+      @include imgCover;
     }
   }
   &-bottom {
