@@ -249,11 +249,11 @@
   &-list {
     margin: 0 -2rem;
     flex-wrap: wrap;
-    row-gap: 2rem;
+    row-gap: 4rem;
     @include flex;
     @include max(1200px) {
       margin: 0 -0.5rem;
-      row-gap: 0.5rem;
+      row-gap: 2rem;
     }
   }
   &-item {
@@ -651,11 +651,6 @@
     }
   }
   &-item {
-    padding: 4rem;
-    border-radius: 2rem;
-    @include max(1024px) {
-      padding: 2rem;
-    }
     @include max(767px) {
       margin-bottom: 2rem;
       border-radius: 2rem;
@@ -664,7 +659,7 @@
   }
   &-img {
     position: relative;
-    padding-top: calc((312 / 610) * 100%);
+    padding-top: calc((312 / 470) * 100%);
     img {
       @include imgCover;
     }

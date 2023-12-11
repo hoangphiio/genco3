@@ -4,34 +4,20 @@ export default function menuModule() {
   const menuBtn = document.querySelector(".hd-bar");
   const menuItems = document.querySelector(".hd-mobile");
   const expandBtn = document.querySelectorAll(".expand");
+  const searchForm = document.querySelector(".searchForm");
 
-  function toggle() {
+  function toggleMenu() {
     body.classList.toggle("onscroll");
-    // Dark background
     overlay.classList.toggle("active");
-    // Add open class
     menuBtn.classList.toggle("open");
     menuItems.classList.toggle("open");
-    overlay.onclick = () => {
-      closeMenu();
-    };
-    if ($(".searchForm").hasClass("active")) {
-      $(".searchForm").removeClass("active");
+    overlay.onclick = closeMenu;
+    if (searchForm.classList.contains("active")) {
+      searchForm.classList.remove("active");
       overlay.classList.toggle("open");
+      body.classList.toggle("onscroll");
     }
   }
-
-  menuBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    toggle();
-  });
-
-  // mobile menu expand
-  expandBtn.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      btn.classList.toggle("open");
-    });
-  });
 
   function closeMenu() {
     expandBtn.forEach((btnSub) => {
@@ -39,31 +25,46 @@ export default function menuModule() {
     });
   }
 
-  window.onkeydown = function (event) {
-    const key = event.key; // const {key} = event; in ES6+
+  function handleKeyDown(event) {
+    const key = event.key;
     const active = menuItems.classList.contains("open");
     if (key === "Escape" && active) {
-      toggle();
+      toggleMenu();
     }
-  };
+  }
 
-  document.addEventListener("click", (e) => {
-    let target = e.target,
-      its_menu = target === menuItems || menuItems.contains(target),
-      its_hamburger = target === menuBtn,
-      menu_is_active = menuItems.classList.contains("open");
+  function handleClick(event) {
+    const target = event.target;
+    const its_menu = target === menuItems || menuItems.contains(target);
+    const its_hamburger = target === menuBtn;
+    const menu_is_active = menuItems.classList.contains("open");
     if (!its_menu && !its_hamburger && menu_is_active) {
-      toggle();
+      toggleMenu();
     }
-  });
+  }
 
-  // Scroll header add class
-  $(window).on("scroll", function () {
-    if ($(window).scrollTop() > 40) {
+  function handleScroll() {
+    if (window.pageYOffset > 40) {
       $(".hd").addClass("in");
     } else {
-      //remove the background property so it comes transparent again (defined in your css)
       $(".hd").removeClass("in");
     }
+  }
+
+  menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleMenu();
   });
+
+  expandBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("open");
+    });
+  });
+
+  window.addEventListener("keydown", handleKeyDown);
+
+  document.addEventListener("click", handleClick);
+
+  window.addEventListener("scroll", handleScroll);
 }

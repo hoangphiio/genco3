@@ -8,45 +8,63 @@ export default function searchModule() {
   const menuBtn = document.querySelector(".hd-bar");
   const menuItems = document.querySelector(".hd-mobile");
 
-  function Toggle() {
+  function toggleMenu() {
     body.classList.toggle("onscroll");
-    // Dark background
     overlay.classList.toggle("active");
-    // Add open class
     menuBtn.classList.toggle("open");
     menuItems.classList.toggle("open");
   }
 
-  if (hdSearch) {
-    hdSearch.onclick = (e) => {
-      e.stopPropagation();
-      body.classList.toggle("onscroll");
-      searchForm.classList.toggle("active");
-      overlay.classList.toggle("open");
-      if ($(".hd-mobile").hasClass("open")) {
-        Toggle();
-      }
-    };
-
-    searchClose.onclick = closeSearchForm;
-
-    function closeSearchForm() {
-      body.classList.remove("onscroll");
-      searchForm.classList.remove("active");
-      overlay.classList.remove("open");
+  function openSearchForm(e) {
+    e.stopPropagation();
+    body.classList.toggle("onscroll");
+    searchForm.classList.toggle("active");
+    overlay.classList.toggle("open");
+    if (menuItems.classList.contains("open")) {
+      toggleMenu();
     }
   }
 
+  function closeSearchForm() {
+    body.classList.remove("onscroll");
+    searchForm.classList.remove("active");
+    overlay.classList.remove("open");
+    if (menuItems.classList.contains("open")) {
+    }
+  }
+
+  if (hdSearch) {
+    hdSearch.onclick = openSearchForm;
+    searchClose.onclick = closeSearchForm;
+  }
+
   $(document).ready(function () {
-    $("#show").click(function () {
-      $(".project-note").slideToggle("flow");
-      if ($(".nw-link-detail").length > 0) {
-        $("#show").addClass("btn-collapse").removeClass("nw-link-detail");
-        $("#show").text("Thu gọn");
+    var $showBtn = $("#show");
+    var $projectNote = $(".project-note");
+
+    $showBtn.click(function () {
+      $projectNote.slideToggle("flow");
+
+      if ($showBtn.hasClass("nw-link-detail")) {
+        $showBtn
+          .addClass("btn-collapse")
+          .removeClass("nw-link-detail")
+          .text("Thu gọn");
       } else {
-        $("#show").removeClass("btn-collapse").addClass("nw-link-detail");
-        $("#show").text("Xem thêm");
+        $showBtn
+          .removeClass("btn-collapse")
+          .addClass("nw-link-detail")
+          .text("Xem thêm");
       }
     });
+  });
+
+  window.addEventListener("resize", function () {
+    const addNavBarLeft = document.querySelector(".res-inner");
+    if (window.innerWidth <= 1024) {
+      addNavBarLeft.classList.add("active");
+    } else {
+      addNavBarLeft.classList.remove("active");
+    }
   });
 }

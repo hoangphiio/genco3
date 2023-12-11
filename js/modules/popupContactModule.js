@@ -1,37 +1,41 @@
 export default function popupContactModule() {
-  $(".btnOpenForm1").on("click", function (event) {
-    event.preventDefault();
-    $(".form-popup1").addClass("visible");
-    $("body").addClass("onscroll");
-  });
+  // Tham chiếu đến các phần tử DOM chỉ một lần
+  var $formPopup1 = $(".form-popup1");
+  var $formPopup2 = $(".form-popup2");
+  var $body = $("body");
 
-  $(".form-popup1").on("click", function (event) {
-    if (
-      $(event.target).is(".form-popup1") ||
-      $(event.target).is(".btnCloseForm1") ||
-      $(event.target).is(".searchClose1 .ic-close")
+  // Sử dụng event delegation để xử lý sự kiện click
+  $(document).on("click", function (e) {
+    var $target = $(e.target);
+
+    // Xử lý sự kiện cho form-popup1
+    if ($target.is(".btnOpenForm1")) {
+      e.preventDefault();
+      $formPopup1.addClass("visible");
+      $body.addClass("onscroll");
+    } else if (
+      $target.is(".form-popup1") ||
+      $target.is(".btnCloseForm1") ||
+      $target.is(".searchClose1 .ic-close")
     ) {
-      event.preventDefault();
-      $(this).removeClass("visible");
-      $("body").removeClass("onscroll");
+      e.preventDefault();
+      $formPopup1.removeClass("visible");
+      $body.removeClass("onscroll");
     }
-  });
 
-  $(".btnOpenForm2").on("click", function (event) {
-    event.preventDefault();
-    $(".form-popup2").addClass("visible");
-    $("body").addClass("onscroll");
-  });
-
-  $(".form-popup2").on("click", function (event) {
-    if (
-      $(event.target).is(".form-popup2") ||
-      $(event.target).is(".btnCloseForm2") ||
-      $(event.target).is(".searchClose2 .ic-close")
+    // Xử lý sự kiện cho form-popup2
+    if ($target.is(".btnOpenForm2")) {
+      e.preventDefault();
+      $formPopup2.addClass("visible");
+      $body.addClass("onscroll");
+    } else if (
+      $target.is(".form-popup2") ||
+      $target.is(".btnCloseForm2") ||
+      $target.is(".searchClose2 .ic-close")
     ) {
-      event.preventDefault();
-      $(this).removeClass("visible");
-      $("body").removeClass("onscroll");
+      e.preventDefault();
+      $formPopup2.removeClass("visible");
+      $body.removeClass("onscroll");
     }
   });
 }
