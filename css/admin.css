@@ -9558,6 +9558,41 @@ div.dropdown-menu {
   }
 }
 
+#accessdenied {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 150px);
+}
+
+.accessdenied .notfound-logo img {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.accessdenied p {
+  font-size: 1.6rem;
+  margin: 0 0 20px;
+}
+
+.accessdenied a {
+  display: block;
+  width: fit-content;
+  margin-top: 10px;
+  cursor: pointer;
+  color: #000;
+  border-radius: 5px;
+  padding: 8px 16px;
+  background-color: #0f0e9f;
+  color: #fff;
+  min-width: 120px;
+  text-align: center;
+  font-weight: 600;
+  margin: 0 auto;
+}
+
 /*-------------------------------------
 				Screen
 --------------------------------------*/
@@ -9701,4 +9736,4 @@ div.dropdown-menu {
   border-collapse: separate;
 }
 
-/*-- 30/11/2023 --*/
+/*-- 11/12/2023 --*/
