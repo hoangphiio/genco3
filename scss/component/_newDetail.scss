@@ -154,6 +154,7 @@
         padding-top: 50%;
         position: relative;
         img {
+          height: 100% !important;
           @include imgCover;
         }
       }
@@ -331,7 +332,7 @@
 .corporate {
   &-new {
     .event {
-      padding-top: 10rem;
+      padding-top: 6rem;
       @include max(1200px) {
         padding-top: 4rem;
       }

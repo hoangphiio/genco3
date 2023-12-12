@@ -67,6 +67,7 @@ $color-third: #df0024;
     line-height: 2rem;
     border: 0.1rem solid #2191eb;
     box-shadow: 0 0.2rem 0.4rem rgba(0, 106, 191, 0.3);
+    cursor: pointer;
     @include flex-al;
     @include min(1201px) {
       &:hover {

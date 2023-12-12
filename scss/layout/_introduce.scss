@@ -635,7 +635,7 @@
 }
 
 .project {
-  padding-bottom: 8rem;
+  padding-bottom: 6rem;
   @include max(1200px) {
     padding-bottom: 4rem;
   }
@@ -757,9 +757,7 @@
           }
           &::after {
             color: #999999;
-            @include max(1200px) {
-              font-size: 2.8rem;
-            }
+            font-size: 2.8rem;
           }
         }
       }
@@ -767,13 +765,9 @@
   }
   &-img {
     position: relative;
-    padding-top: calc((800 / 1170) * 100%);
-    margin-bottom: 6rem;
-    @include max(1200px) {
-      margin-bottom: 3rem;
-    }
+    margin-bottom: 3rem;
     img {
-      @include imgCover;
+      height: auto;
     }
   }
   &-item {
@@ -923,6 +917,7 @@
           padding-bottom: 2rem;
           font-family: "Oswald";
           text-transform: uppercase;
+          cursor: pointer;
           &.tab-active {
             color: $color-third;
             &::before {
@@ -952,7 +947,7 @@
       border-radius: 0.8rem;
       background: #f7f7f7;
       p {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 300;
         line-height: 3rem;
         &:not(:last-child) {

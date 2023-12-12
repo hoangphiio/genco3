@@ -7,7 +7,7 @@
     }
     &-container {
       margin-left: auto;
-      width: calc(100vw - (100vw - 1200px) / 2);
+      width: calc(100vw - (100vw - 1110px) / 2);
       @include max(1200px) {
         width: 100%;
       }
@@ -608,7 +608,7 @@
   &-img {
     overflow: hidden;
     position: relative;
-    padding-top: calc((500 / 456) * 100%);
+    padding-top: calc((500 / 474) * 100%);
     @include min(1201px) {
       &:hover {
         img {
@@ -812,6 +812,7 @@
             font-size: 4.8rem;
             font-weight: 300;
             position: static; // Chỗ này chỉnh lại sau
+            margin-left: 0.8rem;
             @include max(1150px) {
               position: static;
               margin-left: 1rem;
