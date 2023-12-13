@@ -80,6 +80,11 @@
       text-transform: uppercase;
       transition: 0.6s ease-in-out;
       border-radius: 2.5rem 0 2.5rem 0;
+      @include min(1201px){
+        &:hover{
+          border-radius: 2.5rem;
+        }
+      }
       @include max(1200px) {
         padding: 1.5rem;
       }

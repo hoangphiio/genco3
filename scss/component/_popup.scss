@@ -18,7 +18,6 @@
     @include flex-ct;
     &.visible {
       opacity: 1;
-      padding: 1.5rem;
       visibility: visible;
       -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
       -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
@@ -30,7 +29,6 @@
       background: #fff;
       border-radius: 1rem;
       position: relative;
-      margin: 2rem;
       max-height: 73rem;
       overflow: hidden auto;
       @include max(1200px) {
@@ -50,9 +48,6 @@
       padding: 0;
       &-item {
         padding: 0;
-        @include max(767px) {
-          box-shadow: none;
-        }
       }
       &-inner {
         .company {

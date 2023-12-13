@@ -5,9 +5,7 @@
     @include flex-al;
     @include max(1200px) {
       margin: 0 -2rem;
-      margin-bottom: 0.5rem;
       overflow: auto hidden;
-      border-bottom: 0.1rem solid #e5e5e5;
     }
   }
   &-item {
@@ -52,6 +50,20 @@
       }
       a {
         display: block;
+        position: relative;
+        &::after {
+          @include max(1200px) {
+            content: "\e900";
+            top: 0;
+            right: -2.6rem;
+            bottom: 0;
+            margin: auto;
+            display: block;
+            font-size: 1.2rem;
+            position: absolute;
+            font-family: "iconfont";
+          }
+        }
       }
       .dot {
         padding: 0 0.6rem;
@@ -96,6 +108,9 @@
       }
     }
     .expand {
+      @include min(1201px) {
+        pointer-events: none;
+      }
       &.open {
         + .dropdown {
           opacity: 1;
@@ -161,10 +176,11 @@
           opacity: 0;
           visibility: hidden;
           transition: max-height 0.4s ease-in-out;
-          @include max(1200px){
+          @include max(1200px) {
             gap: 4rem;
             opacity: 1;
             max-height: 100%;
+            overflow: hidden;
             visibility: visible;
             @include flex-al;
           }
@@ -199,11 +215,37 @@
           }
         }
       }
+      &.hover{
+        > a{
+          @include max(1200px){
+            &::after{
+              display: none;
+            }
+          }
+        }
+      }
     }
     &-link {
       .dot {
         @include max(1200px) {
           display: none;
+        }
+      }
+    }
+  }
+}
+
+.home-page-new {
+  .bd {
+    &-item {
+      &.hover {
+        @include min(1201px) {
+          &:hover {
+            background: transparent;
+            .ic-right {
+              transform: rotate(270deg);
+            }
+          }
         }
       }
     }

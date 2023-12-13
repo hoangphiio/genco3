@@ -62,7 +62,13 @@
         min-height: 9.6rem;
         font-size: 1.6rem;
         color: #424d54;
+        transition: 0.4s ease-in-out;
         @include lc(4);
+        @include min(1201px){
+          &:hover{
+            color: $color-third;
+          }
+        }
         @include max(1200px) {
           min-height: 9.6rem;
         }
@@ -161,12 +167,13 @@
     }
     &-content {
       height: 100%;
-      padding: 0 3rem;
+      padding: 0 2rem;
       flex-direction: column;
       justify-content: flex-end;
       @include flex;
       @include max(1130px) {
         height: auto;
+        padding: 0;
       }
       h3 {
         min-height: auto;
@@ -314,6 +321,9 @@
 }
 
 .document-file {
+  .connect.section{
+    padding: 0;
+  }
   .dnw {
     &-box {
       display: block;

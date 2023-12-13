@@ -367,9 +367,6 @@
   &-img {
     position: relative;
     padding-top: calc((390 / 475) * 100%);
-    @include max(500px) {
-      padding-top: calc((390 / 475) * 130%);
-    }
     &::before {
       content: "";
       top: 0;
@@ -445,16 +442,26 @@
         width: 100%;
       }
       @include max(767px) {
-        top: 28%;
+        width: 104%;
       }
       > div {
+        @include max(767px) {
+          width: auto;
+          height: auto;
+        }
         &::after {
           color: #fff;
           font-size: 2rem;
           padding: 1.5rem 0.8rem;
           background: rgba(255, 255, 255, 0.7);
-          @include max(1200px) {
-            color: #424d54;
+          @include max(767px) {
+            padding: 0;
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: 600;
+            background: $color-third;
+            @include cir(3rem);
+            @include flex-ct;
           }
         }
       }
@@ -470,7 +477,7 @@
         padding: 4rem;
       }
       @include max(767px) {
-        padding: 3rem;
+        padding: 2rem;
       }
       &::before {
         content: "";
@@ -481,6 +488,9 @@
         height: 82%;
         position: absolute;
         background: #df0024;
+        @include max(400px) {
+          display: none;
+        }
       }
       p {
         &:nth-child(1) {
@@ -530,6 +540,7 @@
         }
         @include max(767px) {
           font-size: 2rem;
+          line-height: 3rem;
         }
         span {
           font-weight: 900;

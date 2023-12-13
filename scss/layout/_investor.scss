@@ -428,6 +428,12 @@
         font-weight: 400;
         @include flex-al;
         @include lc(2);
+        transition: 0.4s ease-in-out;
+        @include min(1201px) {
+          &:hover {
+            color: $color-third;
+          }
+        }
         @include max(1200px) {
           font-size: 1.4rem;
           min-height: 4rem;
@@ -602,7 +608,7 @@
         font-size: 1.6rem;
       }
       @include max(767px) {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
       }
     }
     .position {
@@ -653,8 +659,6 @@
   &-item {
     @include max(767px) {
       margin-bottom: 2rem;
-      border-radius: 2rem;
-      box-shadow: 0 0.2rem 1rem rgba(59, 108, 148, 0.2);
     }
   }
   &-img {
@@ -754,15 +758,17 @@
       }
     }
     &-capcha {
+      margin-top: 1.2rem;
       padding-bottom: 1rem;
     }
     .btn-send {
       a {
         width: 100%;
-        font-size: 1.6rem;
         color: #fff;
-        padding: 1rem 1.2rem;
+        font-weight: 600;
+        font-size: 1.6rem;
         text-align: center;
+        padding: 1rem 1.2rem;
         cursor: pointer;
         @include max(1200px) {
           font-size: 1.8rem;
@@ -778,7 +784,7 @@
 
 .investor {
   .field {
-    padding-top: 8rem;
+    padding-top: 6rem;
     @include max(1200px) {
       padding-top: 4rem;
     }

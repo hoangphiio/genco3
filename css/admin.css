@@ -9339,6 +9339,7 @@ div.dropdown-menu {
   font-size: 14px;
   font-weight: 500;
 }
+
 .ChangePass button[type="button"] {
   width: 100%;
   display: block;
@@ -9351,6 +9352,14 @@ div.dropdown-menu {
   color: #fff;
   font-size: 14px;
   font-weight: 500;
+}
+
+.ChangePass .mess-error {
+  width: 100%;
+  color: #ee1d25;
+  display: block;
+  font-weight:   600;
+  text-align: center;
 }
 
 .showImageFiles {

@@ -41,6 +41,18 @@
       padding: 0 0.5rem 1rem 0.5rem;
       flex-direction: column-reverse;
     }
+    .content {
+      &-title {
+        h3 {
+          transition: 0.4s ease-in-out;
+          @include min(1201px) {
+            &:hover {
+              color: $color-third;
+            }
+          }
+        }
+      }
+    }
     &:nth-child(1) {
       width: 100%;
       .nw-col {
@@ -83,6 +95,13 @@
             display: block;
             position: relative;
             padding-top: calc((480 / 860) * 100%);
+            @include min(1201px) {
+              &:hover {
+                img {
+                  transform: translate(-50%, -50%) scale(1.1);
+                }
+              }
+            }
             img {
               @include imgCover;
             }
@@ -94,7 +113,13 @@
             font-weight: 600;
             font-size: 3rem;
             margin-bottom: 3rem;
+            transition: 0.4s ease-in-out;
             @include lc(3);
+            @include min(1201px) {
+              &:hover {
+                color: $color-third;
+              }
+            }
             @include max(1200px) {
               font-size: 2.4rem;
               line-height: 4rem;
@@ -131,10 +156,17 @@
         &-title {
           margin-bottom: 1.5rem;
           h3 {
-            color: #262626;
+            font-weight: 600;
+            color: #787878;
             font-size: 2.5rem;
             line-height: 3.2rem;
+            transition: 0.4s ease-in-out;
             @include lc(2);
+            @include min(1201px) {
+              &:hover {
+                color: $color-third;
+              }
+            }
             @include max(1200px) {
               font-size: 2.4rem;
             }
@@ -149,6 +181,13 @@
             overflow: hidden;
             position: relative;
             padding-top: calc((340 / 574) * 100%);
+            @include min(1201px) {
+              &:hover {
+                img {
+                  transform: translate(-50%, -50%) scale(1.1);
+                }
+              }
+            }
             img {
               @include imgCover;
             }
@@ -785,7 +824,13 @@
       h3 {
         font-size: 3.2rem;
         font-weight: 500;
+        transition: 0.4s ease-in-out;
         @include lc(2);
+        @include min(1201px) {
+          &:hover {
+            color: $color-third;
+          }
+        }
         @include max(1280px) {
           font-size: 2.8rem;
         }
@@ -813,7 +858,7 @@
 
 .home-page-new {
   .infomation {
-    padding-bottom: 8rem;
+    padding-bottom: 6rem;
     @include max(1200px) {
       padding-bottom: 4rem;
     }
