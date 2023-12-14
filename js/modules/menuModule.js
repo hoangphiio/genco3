@@ -59,6 +59,7 @@ export default function menuModule() {
   expandBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
       btn.classList.toggle("open");
+      $(this).next(".menu-box").stop().slideToggle();
     });
   });
 
