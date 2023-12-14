@@ -114,6 +114,7 @@
   &-content {
     text-align: justify;
     * {
+      font-size: 1.6rem;
       font-family: "Be Vietnam Pro" !important;
     }
     img {
@@ -132,9 +133,8 @@
     }
     p {
       font-size: 1.6rem !important;
-      line-height: 3rem;
-      font-weight: 300;
-      margin-bottom: 2rem;
+      line-height: 2.4rem !important;
+      margin: 2rem 0 !important;
       @include max(767px) {
         font-size: 1.4rem !important;
       }

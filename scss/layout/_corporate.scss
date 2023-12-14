@@ -4,6 +4,16 @@
       margin-bottom: 0;
     }
     &-item {
+      @include max(767px) {
+        min-width: 20rem;
+      }
+      a{
+        &::before{
+          @include max(767px){
+            top: 2rem;
+          }
+        }
+      }
       &:nth-child(1) {
         a {
           &::before {

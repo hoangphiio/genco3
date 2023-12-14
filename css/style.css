@@ -132,15 +132,12 @@ table {
   padding: 0;
 }
 * ::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
+  width: 6px;
+  height: 6px;
   border-radius: 5px;
   -webkit-appearance: none;
   -webkit-appearance: scrollbar;
   -webkit-overflow-scrolling: touch;
-}
-* ::-webkit-scrollbar:horizontal {
-  height: 4px;
 }
 * ::-webkit-scrollbar-track {
   height: 4px !important;
@@ -3272,6 +3269,12 @@ img {
     margin-bottom: -2rem;
   }
 }
+@media screen and (max-width: 767px) {
+  .if-tab .core-list {
+    margin: 0 -0.5rem;
+    margin-bottom: -1rem;
+  }
+}
 .if-tab .core-box {
   padding: 0 2rem;
   padding-bottom: 4rem;
@@ -3288,6 +3291,17 @@ img {
   .if-tab .core-box {
     padding: 0 1rem;
     padding-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .if-tab .core-box {
+    padding: 0 0.5rem;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .if-tab .core-box {
+    width: 100%;
   }
 }
 .if-tab .core-item {
@@ -3322,6 +3336,11 @@ img {
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 0;
+}
+@media screen and (max-width: 1200px) {
+  .if-tab .core-content p {
+    font-size: 1.4rem;
+  }
 }
 .if-box {
   display: -moz-flex;
@@ -3951,6 +3970,7 @@ img {
   text-align: justify;
 }
 .dnw-content * {
+  font-size: 1.6rem;
   font-family: "Be Vietnam Pro" !important;
 }
 .dnw-content img {
@@ -3969,9 +3989,8 @@ img {
 }
 .dnw-content p {
   font-size: 1.6rem !important;
-  line-height: 3rem;
-  font-weight: 300;
-  margin-bottom: 2rem;
+  line-height: 2.4rem !important;
+  margin: 2rem 0 !important;
 }
 @media screen and (max-width: 767px) {
   .dnw-content p {
@@ -6015,20 +6034,12 @@ img {
   }
 }
 .unit-item a {
-  min-height: 5.6rem;
   font-size: 1.6rem;
   color: #424d54;
   font-weight: 500;
   position: relative;
   transition: 0.4s ease-in-out;
   cursor: pointer;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-align-items: center;
 }
 @media screen and (max-width: 767px) {
   .unit-item a {
@@ -9123,6 +9134,16 @@ img {
 
 .corporate .if-top {
   margin-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  .corporate .if-item {
+    min-width: 20rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .corporate .if-item a::before {
+    top: 2rem;
+  }
 }
 .corporate .if-item:nth-child(1) a::before {
   background: url("../assets/img/van-hoa-doanh-nghiep/checklist.svg");

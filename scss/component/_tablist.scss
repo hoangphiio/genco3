@@ -421,6 +421,10 @@
           margin: 0 -1rem;
           margin-bottom: -2rem;
         }
+        @include max(767px){
+          margin: 0 -0.5rem;
+          margin-bottom: -1rem;
+        }
       }
       &-box {
         padding: 0 2rem;
@@ -430,6 +434,13 @@
         @include max(1200px) {
           padding: 0 1rem;
           padding-bottom: 2rem;
+        }
+        @include max(767px){
+          padding: 0 0.5rem;
+          padding-bottom: 1rem;
+        }
+        @include max(500px){
+          width: 100%;
         }
       }
       &-item {
@@ -455,6 +466,9 @@
           font-size: 1.6rem;
           font-weight: 500;
           margin-bottom: 0;
+          @include max(1200px){
+            font-size: 1.4rem
+          }
         }
       }
     }
