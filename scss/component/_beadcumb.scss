@@ -53,7 +53,7 @@
         position: relative;
         &::after {
           @include max(1200px) {
-            content: "\e900";
+            content: "\e905";
             top: 0;
             right: -2.6rem;
             bottom: 0;
@@ -215,10 +215,10 @@
           }
         }
       }
-      &.hover{
-        > a{
-          @include max(1200px){
-            &::after{
+      &.hover {
+        > a {
+          @include max(1200px) {
+            &::after {
               display: none;
             }
           }

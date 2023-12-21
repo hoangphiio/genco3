@@ -2637,7 +2637,7 @@ img {
 }
 @media screen and (max-width: 1200px) {
   .bd-item.hover a::after {
-    content: "\e900";
+    content: "\e905";
     top: 0;
     right: -2.6rem;
     bottom: 0;
@@ -3970,7 +3970,7 @@ img {
   text-align: justify;
 }
 .dnw-content * {
-  font-size: 1.6rem;
+  font-size: 1.6rem !important;
   font-family: "Be Vietnam Pro" !important;
 }
 .dnw-content img {
@@ -3979,6 +3979,20 @@ img {
 .dnw-content table {
   margin: 0 auto;
   width: 100% !important;
+}
+.dnw-content a {
+  color: #4765a0;
+}
+.dnw-content ul {
+  padding-left: 1.6rem;
+  list-style-type: disc !important;
+}
+.dnw-content li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+.dnw-content li:not(:last-child) {
+  margin-bottom: 2rem;
 }
 .dnw-content .desc {
   margin-top: 0;
@@ -6554,6 +6568,9 @@ img {
 .project .unit-swiper:hover {
   box-shadow: none;
 }
+.project .unit-item.tab-active a span {
+  color: #fff;
+}
 .project .typical-img {
   margin-bottom: 2rem;
   position: relative;
@@ -6574,6 +6591,9 @@ img {
 }
 .project .typical-content img {
   height: auto !important;
+}
+.project .typical-content p {
+  margin: 2rem 0 !important;
 }
 .project .typical-title {
   margin-bottom: 3rem;
@@ -6674,9 +6694,18 @@ img {
   min-height: auto;
 }
 .project-note-desc {
-  padding: 4rem;
+  padding: 2rem;
   border-radius: 0.8rem;
   background: #f7f7f7;
+}
+.project-note-desc > * {
+  display: block;
+}
+.project-note-desc > div {
+  margin-bottom: 2rem;
+}
+.project-note-desc > span {
+  background: transparent !important;
 }
 .project-note-desc p {
   font-size: 1.6rem;
