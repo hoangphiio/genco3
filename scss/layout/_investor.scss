@@ -166,6 +166,7 @@
     &-new {
       &-list {
         &:not(:last-child) {
+          margin-bottom: 2.5rem;
           padding-bottom: 2.5rem;
           border-bottom: 0.1rem solid #e7e7e7;
         }
