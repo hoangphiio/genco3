@@ -3073,14 +3073,14 @@ img {
 }
 @media screen and (max-width: 1680px) {
   .if-tab.tablist-1 .if-img {
-    margin-left: -20vw;
-    padding-left: 20vw;
+    margin-left: -15vw;
+    padding-left: 15vw;
   }
 }
 @media screen and (max-width: 1440px) {
   .if-tab.tablist-1 .if-img {
-    margin-left: -15vw;
-    padding-left: 15vw;
+    margin-left: -10vw;
+    padding-left: 10vw;
   }
 }
 @media screen and (max-width: 1055px) {

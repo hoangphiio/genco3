@@ -180,12 +180,12 @@
           margin-left: -25vw;
           padding-left: 25vw;
           @include max(1680px) {
-            margin-left: -20vw;
-            padding-left: 20vw;
-          }
-          @include max(1440px) {
             margin-left: -15vw;
             padding-left: 15vw;
+          }
+          @include max(1440px) {
+            margin-left: -10vw;
+            padding-left: 10vw;
           }
           @include max(1055px) {
             margin-right: 0;
