@@ -3441,7 +3441,7 @@ img {
 .if-img {
   z-index: 3;
   overflow: hidden;
-  min-height: 46rem;
+  min-height: 44rem;
   position: relative;
   padding-top: 100%;
   border-radius: 0 2.5rem 2.5rem 0;
