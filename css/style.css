@@ -3147,6 +3147,24 @@ img {
   margin-left: -4rem;
   border-radius: 2.5rem 0 0 2.5rem;
 }
+@media screen and (max-width: 1680px) {
+  .if-tab.tablist-2 .if-img {
+    margin-right: -20vw;
+    padding-right: 20vw;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .if-tab.tablist-2 .if-img {
+    margin-right: -15vw;
+    padding-right: 15vw;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .if-tab.tablist-2 .if-img {
+    margin-right: -10vw;
+    padding-right: 10vw;
+  }
+}
 @media screen and (max-width: 1055px) {
   .if-tab.tablist-2 .if-img {
     margin: 0;
