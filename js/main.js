@@ -11,7 +11,6 @@ import scrollAddClassModule from "./modules/scrollAddClassModule.js";
 import lightGalleryModule from "./modules/lightGalleryModule.js";
 import magnificModule from "./modules/magnificModule.js";
 import popupContactModule from "./modules/popupContactModule.js";
-import scrollHeaderModule from "./modules/scrollHeaderModule.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   replaceTextModule();
@@ -27,5 +26,4 @@ window.addEventListener("DOMContentLoaded", () => {
   lightGalleryModule();
   magnificModule();
   popupContactModule();
-  scrollHeaderModule();
 });

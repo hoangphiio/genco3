@@ -302,8 +302,9 @@
       flex-direction: column;
     }
     &-img {
-      width: 5rem;
+      min-width: 5rem;
       height: 5rem;
+      cursor: pointer;
     }
     &-content {
       padding-left: 1rem;

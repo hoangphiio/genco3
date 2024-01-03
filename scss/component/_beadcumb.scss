@@ -54,7 +54,7 @@
         &::after {
           @include max(1200px) {
             content: "\e905";
-            top: 0;
+            top: 0.2rem;
             right: -2.6rem;
             bottom: 0;
             margin: auto;

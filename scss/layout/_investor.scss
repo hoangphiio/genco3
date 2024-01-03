@@ -715,12 +715,14 @@
         display: block;
         width: 100%;
         outline: none;
-        cursor: pointer;
+        cursor: default;
       }
       input,
       textarea {
+        font-size: 1.4rem;
         padding: 0.8rem;
         transition: 0.4s ease-in-out;
+        font-family: "Be VietNam Pro";
         @include min(1201px) {
           &:hover {
             border-color: $color-second;

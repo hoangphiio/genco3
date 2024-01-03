@@ -2,7 +2,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 11rem;
+  height: 8rem;
   z-index: 100;
   overflow: hidden;
   position: sticky;
@@ -12,14 +12,42 @@
   flex-direction: column;
   @include flex;
   &.in {
-    transform: translateY(-3rem);
     box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
   }
+  &.marquee-block {
+    height: 11rem;
+    .hd {
+      &-marquee {
+        display: block;
+      }
+      &-nav {
+        top: 11rem;
+        height: calc(100% - 11rem);
+      }
+      &-bar {
+        top: 5.5rem;
+        @include max(1279px) {
+          top: 2.5rem;
+        }
+        @include max(1200px) {
+          top: 2.2rem;
+        }
+      }
+    }
+    + .main .banner.fullScreen {
+      height: calc(100vh - 11rem);
+      @include max(1200px) {
+        height: auto;
+      }
+    }
+  }
   &-marquee {
+    display: none;
+    background: #0a5ba4;
     .marquee {
-      padding: 0.45rem;
+      z-index: 11;
       overflow: hidden;
-      background: #0a5ba4;
+      position: relative;
       &-item {
         display: inline-block;
         white-space: nowrap;
@@ -27,6 +55,14 @@
         @include min(1201px) {
           &:hover {
             animation-play-state: paused;
+          }
+        }
+        span {
+          color: #fff;
+          display: inline-block;
+          padding: 0.45rem;
+          &:not(:last-child) {
+            margin-right: 1rem;
           }
         }
         a {
@@ -52,7 +88,7 @@
     }
   }
   &-bar {
-    top: 5.5rem;
+    top: 2.5rem;
     left: 7rem;
     position: fixed;
     @include max(1440px) {

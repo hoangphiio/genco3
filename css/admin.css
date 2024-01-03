@@ -9358,7 +9358,7 @@ div.dropdown-menu {
   width: 100%;
   color: #ee1d25;
   display: block;
-  font-weight:   600;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -9602,9 +9602,24 @@ div.dropdown-menu {
   margin: 0 auto;
 }
 
+.DynamicForm.class .col-group:nth-child(3){
+  margin-bottom: 10px;
+}
+
+.DynamicForm.class .col-group:nth-child(3) > .col-md {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /*-------------------------------------
 				Screen
 --------------------------------------*/
+@media only screen and (max-width: 1366px) {
+  .DynamicForm.class .col-group:nth-child(3) > .col-md > .col-md {
+    width: 50%;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .group-tab .gridControl {
     overflow: auto;
@@ -9687,6 +9702,10 @@ div.dropdown-menu {
   .form-login .Form-ds {
     width: 100%;
   }
+
+  .DynamicForm.class .col-group:nth-child(3) > .col-md > .col-md{
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 590px) {
@@ -9694,9 +9713,6 @@ div.dropdown-menu {
     min-width: inherit;
   }
 } /*--- end max-width:590px ---*/
-
-@media only screen and (max-width: 500px) {
-} /*--- end max-width:500px ---*/
 
 @-moz-document url-prefix() {
   /* Firefox */
@@ -9735,6 +9751,7 @@ div.dropdown-menu {
   font-family: "roboto", sans-serif;
   font-size: 9pt;
 }
+
 .export .Report_Title > span {
   font-family: "roboto", sans-serif;
   font-size: 12.5pt;
@@ -9745,4 +9762,4 @@ div.dropdown-menu {
   border-collapse: separate;
 }
 
-/*-- 11/12/2023 --*/
+/*-- 27/12/2023 --*/

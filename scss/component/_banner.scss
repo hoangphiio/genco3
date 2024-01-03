@@ -51,7 +51,7 @@
   &.fullScreen {
     z-index: 3;
     position: relative;
-    height: calc(100vh - 11rem);
+    height: calc(100vh - 8rem);
     @include max(1200px) {
       height: auto;
     }
@@ -566,12 +566,9 @@
   .banner {
     &-home {
       &::before {
-        padding-top: calc(42.25% - 18rem);
+        padding-top: calc(45% - 20rem);
         @include max(1200px) {
-          padding-top: 58.25%;
-        }
-        @include max(450px) {
-          padding-top: 100%;
+          padding-top: 35%;
         }
       }
       &::after {

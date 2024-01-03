@@ -638,14 +638,20 @@
       margin-bottom: 2rem;
     }
     &-pd {
-      padding: 3rem;
-      background: #fff;
-      position: relative;
-      border: 0.1rem solid #d3d3d3;
-      transition: 0.4s ease-in-out;
+      a {
+        padding: 3rem;
+        display: block;
+        background: #fff;
+        position: relative;
+        transition: 0.4s ease-in-out;
+        border: 0.1rem solid #d3d3d3;
+      }
       @include min(1201px) {
         &:hover {
-          background: $color-third;
+          a {
+            border-color: $color-third;
+            background: $color-third;
+          }
           img {
             filter: brightness(0) invert(1);
           }

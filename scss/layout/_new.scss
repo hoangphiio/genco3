@@ -939,7 +939,7 @@
               font-weight: 500;
               line-height: 4.6rem;
               @include lc(3);
-              @include max(1200px) {
+              @include max(1366px) {
                 font-size: 2.8rem;
               }
               @include max(767px) {

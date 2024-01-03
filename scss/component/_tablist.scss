@@ -179,8 +179,17 @@
           margin-right: -4rem;
           margin-left: -25vw;
           padding-left: 25vw;
-          @include max(1200px) {
-            margin-right: 0;
+          @include max(1680px) {
+            margin-left: -20vw;
+            padding-left: 20vw;
+          }
+          @include max(1440px) {
+            margin-left: -15vw;
+            padding-left: 15vw;
+          }
+          @include max(1280px) {
+            margin-left: -10vw;
+            padding-left: 10vw;
           }
           @include max(1055px) {
             margin-right: 0;
@@ -191,12 +200,12 @@
         }
         &-wrap {
           margin-left: -4rem;
-          padding-left: 15rem;
+          padding-left: 12rem;
           @include max(1200px) {
-            margin-left: 0;
-            padding-left: 4rem;
+            padding-left: 10rem;
           }
           @include max(1055px) {
+            margin: 0;
             padding: 2rem;
           }
           @include max(767px) {
@@ -207,9 +216,6 @@
             margin-right: -100vw;
             padding-right: 100vw;
             border-radius: 2.5rem 0 0 2.5rem;
-            @include max(1200px){
-              border-radius: 0;
-            }
             @include max(1055px) {
               display: none;
             }
@@ -239,12 +245,8 @@
           padding-right: 25vw;
           margin-left: -4rem;
           border-radius: 2.5rem 0 0 2.5rem;
-          @include max(1200px) {
-            margin-left: 0;
-            border-radius: 0;
-          }
           @include max(1055px) {
-            margin-right: 0;
+            margin: 0;
             padding-right: 0;
             border-radius: 0;
           }
@@ -254,12 +256,12 @@
         }
         &-wrap {
           margin-right: -4rem;
-          padding-right: 15rem;
+          padding-right: 12rem;
           @include max(1200px) {
-            margin-right: 0;
-            padding-right: 4rem;
+            padding-right: 10rem;
           }
           @include max(1055px) {
+            margin: 0;
             padding: 2rem;
           }
           @include max(767px) {
@@ -267,12 +269,9 @@
           }
           &::before {
             right: 0;
-            border-radius: 0 2.5rem 2.5rem 0;
             margin-left: -100vw;
             padding-left: 100vw;
-            @include max(1200px){
-              border-radius: 0;
-            }
+            border-radius: 0 2.5rem 2.5rem 0;
             @include max(1055px) {
               display: none;
             }
@@ -418,10 +417,6 @@
         flex-wrap: wrap;
         @include flex;
         @include max(1200px) {
-          margin: 0 -1rem;
-          margin-bottom: -2rem;
-        }
-        @include max(767px){
           margin: 0 -0.5rem;
           margin-bottom: -1rem;
         }
@@ -432,14 +427,10 @@
         width: calc(100% / 2);
         @include flex-al;
         @include max(1200px) {
-          padding: 0 1rem;
-          padding-bottom: 2rem;
-        }
-        @include max(767px){
           padding: 0 0.5rem;
           padding-bottom: 1rem;
         }
-        @include max(500px){
+        @include max(500px) {
           width: 100%;
         }
       }
@@ -466,8 +457,8 @@
           font-size: 1.6rem;
           font-weight: 500;
           margin-bottom: 0;
-          @include max(1200px){
-            font-size: 1.4rem
+          @include max(1200px) {
+            font-size: 1.4rem;
           }
         }
       }
@@ -475,16 +466,13 @@
   }
   &-box {
     @include flex-al;
-    @include max(1200px) {
-      align-items: normal;
-    }
     @include max(1055px) {
       flex-wrap: wrap;
     }
     &-col {
       &:nth-child(1) {
         width: 30%;
-        @include max(1200px) {
+        @include max(1366px) {
           width: 40%;
         }
         @include max(1055px) {
@@ -493,7 +481,7 @@
       }
       &:nth-child(2) {
         width: 70%;
-        @include max(1200px) {
+        @include max(1366px) {
           width: 60%;
         }
         @include max(1055px) {
@@ -505,15 +493,12 @@
   &-img {
     z-index: 3;
     overflow: hidden;
-    min-height: 44rem;
+    min-height: 50rem;
     position: relative;
     padding-top: calc((448 / 448) * 100%);
     border-radius: 0 2.5rem 2.5rem 0;
-    @include max(1200px) {
-      height: 100%;
-      border-radius: 0;
-    }
     @include max(1055px) {
+      min-height: auto;
       padding-top: calc((648 / 1320) * 100%);
     }
     img {
@@ -523,16 +508,13 @@
   &-wrap {
     z-index: 2;
     padding: 4rem;
-    min-height: 50rem;
+    min-height: 56rem;
     position: relative;
     @include flex-ct;
-    @include max(1200px) {
-      height: 100%;
-      min-height: auto;
-    }
     @include max(1055px) {
-      justify-content: stretch;
+      min-height: auto;
       background: #f7f7f7;
+      justify-content: stretch;
     }
     &::before {
       content: "";
@@ -587,7 +569,7 @@
       font-weight: 300;
       line-height: 2.8rem;
       margin-bottom: 2rem;
-      @include max(767px) {
+      @include max(1200px) {
         font-size: 1.4rem;
         margin-bottom: 1.5rem;
       }
