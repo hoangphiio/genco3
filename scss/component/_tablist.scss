@@ -187,10 +187,6 @@
             margin-left: -15vw;
             padding-left: 15vw;
           }
-          @include max(1280px) {
-            margin-left: -10vw;
-            padding-left: 10vw;
-          }
           @include max(1055px) {
             margin-right: 0;
             margin-left: 0;
@@ -246,14 +242,10 @@
           margin-left: -4rem;
           border-radius: 2.5rem 0 0 2.5rem;
           @include max(1680px) {
-            margin-right: -20vw;
-            padding-right: 20vw;
-          }
-          @include max(1440px) {
             margin-right: -15vw;
             padding-right: 15vw;
           }
-          @include max(1280px) {
+          @include max(1440px) {
             margin-right: -10vw;
             padding-right: 10vw;
           }
