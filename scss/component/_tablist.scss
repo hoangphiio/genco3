@@ -184,7 +184,6 @@
             padding-left: 15vw;
           }
           @include max(1440px) {
-            min-height: 46rem;
             margin-left: -10vw;
             padding-left: 10vw;
           }
@@ -247,7 +246,6 @@
             padding-right: 15vw;
           }
           @include max(1440px) {
-            min-height: 46rem;
             margin-right: -10vw;
             padding-right: 10vw;
           }
@@ -499,7 +497,7 @@
   &-img {
     z-index: 3;
     overflow: hidden;
-    min-height: 50rem;
+    min-height: 46rem;
     position: relative;
     padding-top: calc((448 / 448) * 100%);
     border-radius: 0 2.5rem 2.5rem 0;

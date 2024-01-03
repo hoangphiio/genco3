@@ -3079,7 +3079,6 @@ img {
 }
 @media screen and (max-width: 1440px) {
   .if-tab.tablist-1 .if-img {
-    min-height: 46rem;
     margin-left: -10vw;
     padding-left: 10vw;
   }
@@ -3150,7 +3149,6 @@ img {
 }
 @media screen and (max-width: 1440px) {
   .if-tab.tablist-2 .if-img {
-    min-height: 46rem;
     margin-right: -10vw;
     padding-right: 10vw;
   }
@@ -3443,7 +3441,7 @@ img {
 .if-img {
   z-index: 3;
   overflow: hidden;
-  min-height: 50rem;
+  min-height: 46rem;
   position: relative;
   padding-top: 100%;
   border-radius: 0 2.5rem 2.5rem 0;
