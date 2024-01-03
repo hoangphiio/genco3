@@ -184,6 +184,7 @@
             padding-left: 15vw;
           }
           @include max(1440px) {
+            min-height: 46rem;
             margin-left: -10vw;
             padding-left: 10vw;
           }
@@ -246,6 +247,7 @@
             padding-right: 15vw;
           }
           @include max(1440px) {
+            min-height: 46rem;
             margin-right: -10vw;
             padding-right: 10vw;
           }
@@ -512,7 +514,7 @@
   &-wrap {
     z-index: 2;
     padding: 4rem;
-    min-height: 56rem;
+    min-height: 50rem;
     position: relative;
     @include flex-ct;
     @include max(1055px) {
