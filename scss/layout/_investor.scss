@@ -4,6 +4,13 @@
       margin: 0;
     }
   }
+  &-iframe {
+    iframe {
+      zoom: 1.2;
+      width: 100rem !important;
+      height: 35rem !important;
+    }
+  }
   &-disclosure {
     overflow: hidden;
     padding-bottom: 5rem;

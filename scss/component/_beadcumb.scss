@@ -150,8 +150,8 @@
         border-bottom: 0.1rem solid #eaeaea;
         @include max(1200px) {
           gap: 4rem;
-          background: #fff;
           border-bottom: 0;
+          background: transparent;
           @include flex-al;
         }
         @include min(1201px) {

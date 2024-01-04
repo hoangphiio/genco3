@@ -2811,8 +2811,8 @@ img {
 @media screen and (max-width: 1200px) {
   .bd-item .dropdown-item {
     gap: 4rem;
-    background: #fff;
     border-bottom: 0;
+    background: transparent;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
@@ -3441,7 +3441,7 @@ img {
 .if-img {
   z-index: 3;
   overflow: hidden;
-  min-height: 44rem;
+  min-height: 42rem;
   position: relative;
   padding-top: 100%;
   border-radius: 0 2.5rem 2.5rem 0;
@@ -6950,6 +6950,11 @@ img {
 
 .st-title h2 {
   margin: 0;
+}
+.st-iframe iframe {
+  zoom: 1.2;
+  width: 100rem !important;
+  height: 35rem !important;
 }
 .st-disclosure {
   overflow: hidden;
