@@ -6951,13 +6951,9 @@ img {
 .st-title h2 {
   margin: 0;
 }
-.st-iframe iframe {
-  height: 35rem !important;
-}
 @media screen and (min-width: 1201px) {
   .st-iframe iframe {
-    scale: 1.17;
-    margin-left: 7rem;
+    scale: 1.02;
     width: 100rem !important;
   }
 }
@@ -7851,6 +7847,16 @@ img {
 @media screen and (max-width: 767px) {
   .contact .form .btn-send a {
     font-size: 1.6rem;
+  }
+}
+
+.home-investor .st-iframe iframe {
+  height: 31rem !important;
+}
+@media screen and (min-width: 1201px) {
+  .home-investor .st-iframe iframe {
+    scale: 1.14;
+    margin-left: 5.5rem;
   }
 }
 

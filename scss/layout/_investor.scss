@@ -6,10 +6,8 @@
   }
   &-iframe {
     iframe {
-      height: 35rem !important;
       @include min(1201px) {
-        scale: 1.17;
-        margin-left: 7rem;
+        scale: 1.02;
         width: 100rem !important;
       }
     }
@@ -789,6 +787,20 @@
         }
         @include max(767px) {
           font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+.home-investor {
+  .st {
+    &-iframe {
+      iframe {
+        height: 31rem !important;
+        @include min(1201px) {
+          scale: 1.14;
+          margin-left: 5.5rem;
         }
       }
     }
