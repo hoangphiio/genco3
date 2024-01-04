@@ -6951,12 +6951,14 @@ img {
 .st-title h2 {
   margin: 0;
 }
+.st-iframe iframe {
+  height: 35rem !important;
+}
 @media screen and (min-width: 1201px) {
   .st-iframe iframe {
     scale: 1.17;
     margin-left: 7rem;
     width: 100rem !important;
-    height: 35rem !important;
   }
 }
 .st-disclosure {

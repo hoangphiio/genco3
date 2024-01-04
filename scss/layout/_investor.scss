@@ -6,11 +6,11 @@
   }
   &-iframe {
     iframe {
+      height: 35rem !important;
       @include min(1201px) {
         scale: 1.17;
         margin-left: 7rem;
         width: 100rem !important;
-        height: 35rem !important;
       }
     }
   }
