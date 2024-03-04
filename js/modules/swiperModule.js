@@ -41,13 +41,13 @@ export default function swiperModule() {
   });
 
   const swiperParent = new Swiper(".banner .swiper-parent", {
-    slidesPerView: 1,
-    centeredSlides: true,
-    speed: 1200,
-    autoplay: { delay: 5000, disableOnInteraction: false },
+    speed: 500,
     effect: "fade",
     noSwiping: true,
+    slidesPerView: 1,
+    centeredSlides: true,
     allowTouchMove: false,
+    autoplay: { delay: 5000, disableOnInteraction: false },
     navigation: {
       nextEl: ".banner .swiper-next",
       prevEl: ".banner .swiper-prev",

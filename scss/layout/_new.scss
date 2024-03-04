@@ -25,20 +25,16 @@
     }
   }
   &-list {
-    margin: 0 -1rem;
     position: relative;
     flex-wrap: wrap;
     @include flex;
-    @include max(767px) {
-      margin: 0 -0.5rem;
-    }
   }
   &-item {
-    padding: 0 1rem 2rem 1rem;
     flex-wrap: wrap;
+    padding: 0 1rem 2rem 1rem;
     @include flex;
     @include max(767px) {
-      padding: 0 0.5rem 1rem 0.5rem;
+      padding: 0 0 1rem 0;
       flex-direction: column-reverse;
     }
     .content {
@@ -56,9 +52,8 @@
     &:nth-child(1) {
       width: 100%;
       .nw-col {
-        padding: 0 1rem;
         @include max(767px) {
-          padding: 0 0.5rem;
+          padding: 0;
         }
         &:nth-child(1) {
           width: 35%;
@@ -78,7 +73,8 @@
           z-index: 2;
           top: 5rem;
           width: 100%;
-          max-width: 60rem;
+          padding-left: 0;
+          max-width: 54rem;
           position: absolute;
           @include max(991px) {
             top: 2rem;
@@ -90,28 +86,26 @@
           }
         }
         &-img {
+          &:has(img[src="/assets/img/defaultimg.svg"]) {
+            img {
+              object-fit: contain;
+            }
+          }
           a {
             overflow: hidden;
             display: block;
             position: relative;
-            padding-top: calc((480 / 860) * 100%);
-            @include min(1201px) {
-              &:hover {
-                img {
-                  transform: translate(-50%, -50%) scale(1.1);
-                }
-              }
-            }
-            img {
-              @include imgCover;
-            }
+            padding-top: calc((338 / 470) * 100%);
+          }
+          img {
+            @include imgCover;
           }
         }
         &-title {
           h3 {
             color: #262626;
             font-weight: 600;
-            font-size: 3rem;
+            font-size: 2.6rem;
             margin-bottom: 3rem;
             transition: 0.4s ease-in-out;
             @include lc(3);
@@ -127,12 +121,13 @@
             }
             @include max(767px) {
               font-size: 1.8rem;
+              line-height: 3rem;
             }
           }
         }
         &-time {
           span {
-            font-size: 2.4rem;
+            font-size: 2rem;
             @include max(1200px) {
               font-size: 1.8rem;
             }
@@ -145,9 +140,11 @@
     }
     &:not(:nth-child(1)) {
       width: 50%;
+      margin-bottom: -2rem;
       flex-direction: column-reverse;
       @include max(767px) {
         width: 100%;
+        margin-bottom: 0;
       }
       .nw-col {
         width: 100%;
@@ -156,9 +153,10 @@
         &-title {
           margin-bottom: 1.5rem;
           h3 {
+            min-height: 6.4rem;
             font-weight: 600;
-            color: #787878;
-            font-size: 2.5rem;
+            color: #262626;
+            font-size: 2.4rem;
             line-height: 3.2rem;
             transition: 0.4s ease-in-out;
             @include lc(2);
@@ -172,6 +170,7 @@
             }
             @include max(767px) {
               font-size: 1.8rem;
+              min-height: unset;
             }
           }
         }
@@ -180,16 +179,14 @@
             display: block;
             overflow: hidden;
             position: relative;
-            padding-top: calc((340 / 574) * 100%);
-            @include min(1201px) {
-              &:hover {
-                img {
-                  transform: translate(-50%, -50%) scale(1.1);
-                }
-              }
-            }
+            padding-top: calc((338 / 486) * 100%);
+          }
+          img {
+            @include imgCover;
+          }
+          &:has(img[src="/assets/img/defaultimg.svg"]) {
             img {
-              @include imgCover;
+              object-fit: contain;
             }
           }
         }
@@ -211,6 +208,9 @@
       background: rgba(255, 255, 255, 0.5);
       @include max(1200px) {
         padding: 2rem;
+      }
+      @include max(767px) {
+        padding: 2rem 0;
       }
     }
     &-time {
@@ -256,7 +256,12 @@
         &-img {
           overflow: hidden;
           position: relative;
-          padding-top: calc((240 / 370) * 100%);
+          padding-top: calc((300 / 432) * 100%);
+          &:has(img[src="/assets/img/defaultimg.svg"]) {
+            img {
+              object-fit: contain;
+            }
+          }
           &.gallItem {
             &::before {
               content: "";
@@ -473,7 +478,12 @@
   &-img {
     overflow: hidden;
     position: relative;
-    padding-top: calc((400 / 585) * 100%);
+    padding-top: calc((402 / 750) * 100%);
+    &:has(img[src="/assets/img/defaultimg.svg"]) {
+      img {
+        object-fit: contain;
+      }
+    }
     img {
       @include imgCover;
     }
@@ -485,14 +495,16 @@
       color: #262626;
       font-size: 2.4rem;
       margin-bottom: 2rem;
-      line-height: 3.6rem;
+      line-height: 4rem;
       transition: 0.4s ease-in-out;
       @include lc(3);
       @include max(1200px) {
         font-size: 1.8rem;
+        min-height: auto;
       }
       @include max(767px) {
         font-size: 1.6rem;
+        line-height: 3rem;
       }
     }
   }
@@ -563,7 +575,7 @@
     position: relative;
     padding-top: calc((400 / 585) * 100%);
     img {
-      @include imgCover;
+      @include imgContain;
     }
   }
   &-info {
@@ -698,6 +710,11 @@
     }
     @include max(850px) {
       padding-top: calc((648 / 1320) * 100%);
+    }
+    &:has(img[src="/assets/img/defaultimg.svg"]) {
+      img {
+        object-fit: contain;
+      }
     }
     img {
       @include imgCover;

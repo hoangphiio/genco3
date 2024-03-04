@@ -2574,8 +2574,9 @@ div.k-multiselect .k-input {
 .ItemInput textarea {
   width: 100%;
   height: 120px;
-  border: 1px #c5c5c5 solid;
   resize: vertical;
+  padding-left: 5px;
+  border: 1px #c5c5c5 solid;
 }
 .ItemInput input.btnUpload {
   width: auto;
@@ -3034,10 +3035,6 @@ table.k-editor span.k-dropdown-wrap.k-state-default .k-input {
 .GranttPermission .search-form > div.grid-button .btnCheck {
   margin-right: 5px;
 }
-.GranttPermission .k-grid-header th.k-header,
-.GranttPermission div.k-grid td {
-  text-align: center;
-}
 .GranttPermission .k-grid-header th.k-header:nth-child(4),
 .GranttPermission div.k-grid td:nth-child(4),
 .GranttPermission div.k-grid .k-grouping-row td {
@@ -3047,7 +3044,12 @@ table.k-editor span.k-dropdown-wrap.k-state-default .k-input {
 .CheckAdminPermission .search-form {
   padding-right: 0;
 }
-
+.CheckAdminPermission .k-selectable tr th:not(:nth-child(3)){
+  text-align: center !important;
+}
+.CheckAdminPermission .k-selectable > tbody > tr > td:not(:nth-child(3)){
+  text-align: center !important;
+}
 .Resource .search-form {
   padding-right: 205px;
 }
@@ -3123,18 +3125,22 @@ table.k-editor span.k-dropdown-wrap.k-state-default .k-input {
   right: 0;
 }
 .div-choicedate ul {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 -5px;
+  margin-bottom: -10px;
 }
 .div-choicedate ul li {
   display: inline-block;
-  width: 49%;
-  padding-bottom: 15px;
+  width: 50%;
+  padding: 0 5px;
+  padding-bottom: 10px;
   font-weight: 600;
   cursor: pointer;
 }
-
 .div-choicedate ul li:hover,
 .div-choicedate ul li.selected {
   color: #0f0e9f;
@@ -6305,8 +6311,10 @@ form.k-popup.k-filter-menu {
   font-weight: normal;
 }
 .k-popup ul.k-list .k-item {
+  display: flex;
   padding: 5px 10px;
-  line-height: 1.4;
+  margin-bottom: 1px;
+  flex-direction: column;
 }
 .k-popup ul.k-list .k-item .parent-node,
 .k-popup ul.k-list .k-item .root-node {
@@ -9224,6 +9232,7 @@ div.dropdown-menu {
 
 .User .cntImagePath label {
   cursor: pointer;
+  margin-bottom: 5px;
 }
 .k-editor-toolbar .k-tool-icon.k-i-add-image::before {
   content: "\e9c5";
@@ -9416,13 +9425,14 @@ div.dropdown-menu {
 }
 .div-file .showAttachFiles,
 .div-file .showAttachFilesEN {
-  padding: 8px 16px;
-  background-color: #0f0e9f;
-  border-radius: 3px;
   color: #fff;
   cursor: pointer;
-  transition: 0.4s ease-in-out;
+  padding: 8px 16px;
   width: fit-content;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  background-color: #0f0e9f;
+  transition: 0.4s ease-in-out;
   display: block !important;
 }
 .div-file .showAttachFiles:hover,
@@ -9602,13 +9612,133 @@ div.dropdown-menu {
   margin: 0 auto;
 }
 
-.DynamicForm.class .col-group:nth-child(3){
+.DynamicForm.class .col-group:nth-child(3) {
   margin-bottom: 10px;
 }
 
 .DynamicForm.class .col-group:nth-child(3) > .col-md {
   display: flex;
   flex-wrap: wrap;
+}
+
+.DynamicForm .imagesbuttom {
+  text-align: right;
+}
+
+.DynamicForm .ItemRow .ItemInput .showImageFiles{
+  margin: 0;
+}
+
+.DynamicForm .showImageFiles {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.DynamicForm #imageListContainer {
+  border: 1px solid #c5c5c5;
+}
+
+.DynamicForm #txtTitle {
+  margin-bottom: 0;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.DynamicForm #txtTitle h3 {
+  font-size: 13px;
+}
+
+.DynamicForm #uploadedImages {
+  width: 30%;
+  flex: unset;
+  border-right: 1px solid #c5c5c5;
+}
+
+.DynamicForm #currentImage {
+  width: 70%;
+  flex: unset;
+}
+
+.DynamicForm #currentImage img {
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  object-fit: cover;
+}
+
+.DynamicForm #currentImage .TitleImage {
+  padding: 0;
+}
+
+.DynamicForm #currentImage #fileIframe {
+  border: 0;
+}
+
+.DynamicForm #selectedImageList {
+  margin: 0;
+  padding: 10px;
+  max-height: 485px;
+  position: relative;
+}
+
+.DynamicForm #selectedImageList > li {
+  display: flex;
+  margin-bottom: 0;
+  flex-direction: column;
+}
+
+.DynamicForm #selectedImageList > li:not(:last-child) {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.DynamicForm #selectedImageList > li:not(:last-child)::before {
+  content: "";
+  left: -10px;
+  bottom: 0;
+  width: calc(100% + 20px);
+  height: 1px;
+  background: #c5c5c5;
+  position: absolute;
+}
+
+.DynamicForm #selectedImageList > li .imageCheckbox {
+  width: fit-content;
+}
+
+.DynamicForm #selectedImageList > li .selectedImage {
+  margin: 10px 0;
+}
+
+.DynamicForm #selectedImageList > li img {
+  display: block;
+  object-fit: cover;
+  margin: 10px 0;
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+.DynamicForm #selectedImageList > li > * {
+  margin-right: 0;
+}
+
+.DynamicForm #selectedImageList > li .imageLink {
+  text-align: right;
+}
+
+.DynamicForm .k-multiselect-clearable .k-multiselect-wrap .k-reset {
+  padding: 2px 5px;
+}
+
+.DynamicForm .k-multiselect-clearable .k-multiselect-wrap .k-reset .k-button{
+  margin-right: 5px;
+}
+
+.k-list > .k-state-focused.k-state-selected,
+.k-listview > .k-state-focused.k-state-selected,
+.k-state-focused.k-state-selected,
+td.k-state-focused.k-state-selected {
+  box-shadow: unset !important;
 }
 
 /*-------------------------------------
@@ -9703,7 +9833,7 @@ div.dropdown-menu {
     width: 100%;
   }
 
-  .DynamicForm.class .col-group:nth-child(3) > .col-md > .col-md{
+  .DynamicForm.class .col-group:nth-child(3) > .col-md > .col-md {
     width: 100%;
   }
 }
@@ -9762,4 +9892,4 @@ div.dropdown-menu {
   border-collapse: separate;
 }
 
-/*-- 27/12/2023 --*/
+/*-- 22/01/2024 --*/

@@ -34,28 +34,4 @@ export default function popupContactModule() {
       $("body").removeClass("onscroll");
     }
   });
-
-  const $formPopup3 = $(".form-popup3");
-
-  $formPopup3.addClass("active");
-
-  if ($formPopup3.hasClass("active")) {
-    $("body").addClass("onscroll");
-  }
-
-  $(".search-form-close").click(function () {
-    $formPopup3.removeClass("active");
-    $("body").removeClass("onscroll");
-  });
-
-  setTimeout(function () {
-    $formPopup3.removeClass("active");
-    $("body").removeClass("onscroll");
-  }, 10000);
-
-  $(".btnOpenForm3").on("click", function (event) {
-    event.preventDefault();
-    $(".form-popup3").addClass("active");
-    $("body").addClass("onscroll");
-  });
 }

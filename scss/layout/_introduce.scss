@@ -410,7 +410,7 @@
   }
   &-swiper {
     padding: 1.2rem;
-    height: 42rem;
+    height: 44rem;
     position: relative;
     transition: 0.4s ease-in-out;
     @include max(1200px) {
@@ -418,7 +418,7 @@
       padding: 0;
     }
     @include max(450px) {
-      height: 42rem;
+      height: 48rem;
     }
     .swiper {
       height: 100%;
@@ -518,11 +518,11 @@
         }
       }
       .box {
-        flex-wrap: wrap;
         row-gap: 1rem;
         padding-bottom: 1rem;
+        flex-direction: column;
         cursor: default;
-        @include flex-btw;
+        @include flex;
         a {
           padding: 0 3rem;
           padding-right: 2rem;
@@ -850,7 +850,40 @@
       }
     }
   }
-
+  .chart-table{
+    @include max(767px){
+      overflow: auto;
+    }
+  }
+  .form-lvhd {
+    width: 100%;
+    margin-top: 1rem;
+    @include max(767px){
+      min-width: 120rem;
+    }
+    tr {
+      &:nth-child(1) {
+        td {
+          &:nth-child(1) {
+            border: 0;
+          }
+        }
+      }
+      td {
+        padding: 0.5rem;
+        font-weight: 500;
+        color: #0f0e9f;
+        border: 0.1rem solid #ececec;
+        &:nth-child(1) {
+          width: 22rem;
+        }
+        &:not(:nth-child(1)){
+         text-align: center;
+         vertical-align: middle;
+        }
+      }
+    }
+  }
   .typical {
     &-img {
       margin-bottom: 2rem;

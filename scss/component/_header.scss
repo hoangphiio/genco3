@@ -34,7 +34,7 @@
         }
       }
     }
-    + .main .banner.fullScreen {
+    ~ .main .banner.fullScreen {
       height: calc(100vh - 11rem);
       @include max(1200px) {
         height: auto;
@@ -700,6 +700,18 @@
   }
   &-search {
     cursor: pointer;
+    .search {
+      @include min(1201px) {
+        padding: 0.8rem;
+        margin: -0.8rem;
+        border-radius: 99.9rem;
+        width: calc(100% + 1.6rem);
+        transition: 0.2s ease-in-out;
+        &:hover {
+          background: rgba(0, 0, 0, 0.05);
+        }
+      }
+    }
     .ic {
       display: block;
       &::before {

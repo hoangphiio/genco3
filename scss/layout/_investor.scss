@@ -5,10 +5,14 @@
     }
   }
   &-iframe {
+    @include max(1200px) {
+      overflow: auto;
+    }
     iframe {
+      width: 100rem !important;
       @include min(1201px) {
-        scale: 1.02;
-        width: 100rem !important;
+        height: 158rem;
+        margin-left: -1.4rem;
       }
     }
   }

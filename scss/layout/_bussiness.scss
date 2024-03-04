@@ -40,8 +40,8 @@
       &-col {
         padding: 0;
         width: calc(100% / 2);
-        @include max(767px){
-          width: 100% ;
+        @include max(767px) {
+          width: 100%;
         }
       }
       &-info {
@@ -192,6 +192,16 @@
       }
       ul {
         padding-bottom: 2rem;
+        &:nth-child(4) {
+          li {
+            span {
+              color: #000 !important;
+              text-transform: unset;
+              font-size: 1.6rem !important;
+              font-family: "Be VietNam Pro" !important;
+            }
+          }
+        }
         li {
           font-size: 1.6rem;
           line-height: 3rem;
@@ -223,13 +233,13 @@
     }
     &-table {
       padding-bottom: 2rem;
-      @include max(767px){
+      @include max(767px) {
         overflow: auto;
       }
       table {
         width: 100%;
         background: #f5f9ff;
-        @include max(767px){
+        @include max(767px) {
           min-width: 100rem;
         }
         tr {
@@ -264,14 +274,14 @@
       }
     }
   }
-  .customer{
+  .customer {
     padding-top: 8rem;
   }
-  .section{
+  .section {
     padding-bottom: 0;
   }
 }
 
-.customer{
+.customer {
   padding-top: 10rem;
 }

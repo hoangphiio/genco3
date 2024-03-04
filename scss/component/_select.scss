@@ -9,8 +9,14 @@
     position: relative;
     padding: 0.8rem 1rem;
     border-radius: 0.5rem;
+    transition: 0.4s ease-in-out;
     border: 0.08rem solid #b9b9b9;
     cursor: pointer;
+    @include min(1201px) {
+      &:hover {
+        border-color: $color-third;
+      }
+    }
     &::before {
       content: "\e905";
       top: 1rem;
@@ -97,7 +103,7 @@
     left: 0;
     right: 0;
     opacity: 0;
-    max-height: 9.5rem;
+    max-height: 7.7rem;
     display: block;
     margin-top: 1rem;
     overflow: hidden auto;

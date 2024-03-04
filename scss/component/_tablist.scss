@@ -177,15 +177,23 @@
       .if {
         &-img {
           margin-right: -4rem;
-          margin-left: -25vw;
-          padding-left: 25vw;
+          margin-left: -21vw;
+          padding-left: 21vw;
           @include max(1680px) {
             margin-left: -15vw;
             padding-left: 15vw;
           }
           @include max(1440px) {
+            margin-left: -12vw;
+            padding-left: 12vw;
+          }
+          @include max(1366px) {
             margin-left: -10vw;
             padding-left: 10vw;
+          }
+          @include max(1280px) {
+            margin-left: -7vw;
+            padding-left: 7vw;
           }
           @include max(1055px) {
             margin-right: 0;
@@ -246,8 +254,16 @@
             padding-right: 15vw;
           }
           @include max(1440px) {
+            margin-right: -12vw;
+            padding-right: 12vw;
+          }
+          @include max(1366px) {
             margin-right: -10vw;
             padding-right: 10vw;
+          }
+          @include max(1280px) {
+            margin-right: -7vw;
+            padding-right: 7vw;
           }
           @include max(1055px) {
             margin: 0;
@@ -501,6 +517,11 @@
     position: relative;
     padding-top: calc((448 / 448) * 100%);
     border-radius: 0 2.5rem 2.5rem 0;
+    &:has(img[src="/assets/img/defaultimg.svg"]) {
+      img {
+        object-fit: contain;
+      }
+    }
     @include max(1055px) {
       min-height: auto;
       padding-top: calc((648 / 1320) * 100%);
@@ -573,6 +594,7 @@
       font-weight: 300;
       line-height: 2.8rem;
       margin-bottom: 2rem;
+      text-align: justify;
       @include max(1200px) {
         font-size: 1.4rem;
         margin-bottom: 1.5rem;
