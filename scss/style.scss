@@ -1,3 +1,7 @@
+@import url("../assets/font/BeVietNam/stylesheet.css");
+@import url("../assets/font/Oswald/stylesheet.css");
+
+// library
 @import url("../js/library/aos/aos.css");
 @import url("../js/library/Magific/magnific.css");
 @import url("../js/library/lightgallery/lightgallery-all-min.css");
@@ -13,6 +17,7 @@
 // component
 @import "./component/footer";
 @import "./component/header";
+@import "./component/marquee";
 @import "./component/select";
 
 // layout
