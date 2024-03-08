@@ -7,7 +7,6 @@
     width: 26.5rem;
     background: #fff;
     position: relative;
-    padding: 0.8rem 1rem;
     border-radius: 0.5rem;
     transition: 0.4s ease-in-out;
     border: 0.08rem solid #b9b9b9;
@@ -95,6 +94,9 @@
     span {
       display: block;
       position: relative;
+    }
+    &-trigger {
+      padding: 0.8rem 1rem;
     }
   }
   &-options {

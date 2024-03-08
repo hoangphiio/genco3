@@ -5,8 +5,8 @@ export default function searchModule() {
   const overlay = document.querySelector(".overlay");
   const body = document.querySelector("body");
 
-  const menuBtn = document.querySelector(".hd-bar");
-  const menuItems = document.querySelector(".hd-mobile");
+  const menuBtn = document.querySelector(".header-bar");
+  const menuItems = document.querySelector(".header-mobile");
 
   function toggleMenu() {
     body.classList.toggle("onscroll");

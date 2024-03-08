@@ -1,8 +1,8 @@
 export default function menuModule() {
   const body = document.querySelector("body");
   const overlay = document.querySelector(".overlay");
-  const menuBtn = document.querySelector(".hd-bar");
-  const menuItems = document.querySelector(".hd-mobile");
+  const menuBtn = document.querySelector(".header-bar");
+  const menuItems = document.querySelector(".header-mobile");
   const expandBtn = document.querySelectorAll(".expand");
   const searchForm = document.querySelector(".searchForm");
 
@@ -45,9 +45,9 @@ export default function menuModule() {
 
   function handleScroll() {
     if (window.pageYOffset > 40) {
-      $(".hd").addClass("in");
+      $(".header").addClass("in");
     } else {
-      $(".hd").removeClass("in");
+      $(".header").removeClass("in");
     }
   }
 

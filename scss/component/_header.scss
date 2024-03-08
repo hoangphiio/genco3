@@ -1,4 +1,4 @@
-.hd {
+.header {
   top: 0;
   left: 0;
   width: 100%;
@@ -16,7 +16,7 @@
   }
   &.marquee-block {
     height: 11rem;
-    .hd {
+    .header {
       &-marquee {
         display: block;
       }
@@ -150,7 +150,7 @@
   }
   &-mobile {
     &.open {
-      .hd-nav {
+      .header-nav {
         transform: translateX(0);
         transition-delay: 0.4s;
       }
