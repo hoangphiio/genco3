@@ -1,0 +1,38 @@
+&.marquee-block {
+  height: 11rem;
+  &-marquee {
+    display: block;
+  }
+}
+&-marquee {
+  display: none;
+  background: #0a5ba4;
+  .marquee {
+    z-index: 11;
+    overflow: hidden;
+    position: relative;
+    &-item {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee 20s linear infinite;
+      @include min(1201px) {
+        &:hover {
+          animation-play-state: paused;
+        }
+      }
+      span {
+        color: #fff;
+        display: inline-block;
+        padding: 0.45rem;
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+      a {
+        color: #fff;
+        font-weight: 600;
+        cursor: default;
+      }
+    }
+  }
+}
