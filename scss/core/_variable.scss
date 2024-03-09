@@ -1,6 +1,8 @@
 $color-fisrt: #2191eb;
 $color-second: #0b325d;
 $color-third: #df0024;
+$color-black: #000;
+$color-white: #fff;
 
 .dot {
   padding-left: 1.5rem;
@@ -35,12 +37,13 @@ $color-third: #df0024;
 }
 .btn-contact {
   a {
+    gap: 0.8rem;
     overflow: hidden;
-    width: fit-content;
-    padding: 0.891rem 1.845rem;
     background: #fff;
-    border-radius: 2rem;
     line-height: 2rem;
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 0.891rem 1.845rem;
     border: 0.1rem solid #2191eb;
     box-shadow: 0 0.2rem 0.4rem rgba(0, 106, 191, 0.3);
     cursor: pointer;
@@ -57,7 +60,6 @@ $color-third: #df0024;
     }
     span {
       font-size: 1.6rem;
-      margin-left: 0.8rem;
       transition: 0.4s ease-in-out;
       cursor: default;
     }
@@ -105,42 +107,40 @@ $color-third: #df0024;
     }
   }
 }
-.btn-hover {
+.icon {
   display: block;
-  overflow: hidden;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  padding-left: 3rem;
   position: relative;
-  border-radius: 0.8rem;
-  background: $color-third;
-  @include min(1201px) {
-    &:hover {
-      a {
-        color: #fff;
-        font-weight: 600;
-      }
-      &::after {
-        left: 0;
-        right: auto;
-        width: 100%;
-      }
+  &::before {
+    top: 0;
+    left: 0;
+    color: #8a8a8a;
+    display: block;
+    font-size: 1.8rem;
+    position: absolute;
+    font-family: "iconfont";
+  }
+  &.location {
+    &::before {
+      content: "\e901";
     }
   }
-  &::after {
-    content: "";
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100%;
-    position: absolute;
-    background: #ae0000;
-    transition: 0.4s ease-in-out;
+  &.phone-1 {
+    &::before {
+      content: "\e903";
+    }
   }
-  a {
-    color: #fff;
-    z-index: 3;
-    display: block;
-    overflow: hidden;
-    position: relative;
-    text-transform: uppercase;
-    transition: 0.4s ease-in-out;
+  &.phone-2 {
+    &::before {
+      content: "\e904";
+    }
+  }
+  &.email {
+    &::before {
+      content: "\e902";
+      font-size: 1.4rem;
+    }
   }
 }

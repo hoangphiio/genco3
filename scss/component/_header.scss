@@ -14,65 +14,6 @@
   &.in {
     box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
   }
-  &.marquee-block {
-    height: 11rem;
-    .header {
-      &-marquee {
-        display: block;
-      }
-      &-nav {
-        top: 11rem;
-        height: calc(100% - 11rem);
-      }
-      &-bar {
-        top: 5.5rem;
-        @include max(1279px) {
-          top: 2.5rem;
-        }
-        @include max(1200px) {
-          top: 2.2rem;
-        }
-      }
-    }
-    ~ .main .banner.fullScreen {
-      height: calc(100vh - 11rem);
-      @include max(1200px) {
-        height: auto;
-      }
-    }
-  }
-  &-marquee {
-    display: none;
-    background: #0a5ba4;
-    .marquee {
-      z-index: 11;
-      overflow: hidden;
-      position: relative;
-      &-item {
-        display: inline-block;
-        white-space: nowrap;
-        animation: marquee 20s linear infinite;
-        @include min(1201px) {
-          &:hover {
-            animation-play-state: paused;
-          }
-        }
-        span {
-          color: #fff;
-          display: inline-block;
-          padding: 0.45rem;
-          &:not(:last-child) {
-            margin-right: 1rem;
-          }
-        }
-        a {
-          color: #fff;
-          font-weight: 600;
-          cursor: default;
-        }
-      }
-    }
-  }
   &-menu {
     height: 100%;
     @include flex-btw;
@@ -91,19 +32,6 @@
     top: 2.5rem;
     left: 7rem;
     position: fixed;
-    @include max(1440px) {
-      left: 1rem;
-    }
-    @include max(1279px) {
-      top: 2.5rem;
-      left: 1.5rem;
-      position: absolute;
-    }
-    @include max(1200px) {
-      top: 2.2rem;
-      left: unset;
-      right: 1.5rem;
-    }
     @include min(1201px) {
       &:hover .line {
         width: 3.2rem;
@@ -168,7 +96,7 @@
     transform: translateX(-110%);
     justify-content: flex-start;
     transition: cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-    background: url("../assets/img/banner/banner-footer.webp");
+    background: url("../assets/img/banner/banner-mask.webp");
     background-color: #f5f5f5;
     @include default-background;
     @include flex;
@@ -591,7 +519,7 @@
     .ic {
       display: block;
       &::before {
-        font-size: 2.4rem;
+        font-size: 2rem;
         @include max(1200px) {
           font-size: 2rem;
         }

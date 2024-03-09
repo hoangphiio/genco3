@@ -6,7 +6,7 @@
     {
       "label": "Run sass command",
       "type": "shell",
-      "command": "sass ./scss/style.scss ./css/style.css --watch"
+      "command": "npm run scss"
     }
   ]
 }

@@ -10,7 +10,7 @@
     height: 100%;
     display: block;
     position: absolute;
-    background: url(../assets/img/banner/banner-footer.webp);
+    background: url("../assets/img/banner/banner-mask.webp");
     @include default-background;
   }
   &-top {
@@ -21,6 +21,7 @@
     z-index: 2;
     position: relative;
     background: #ecedee;
+    border-top: 0.1rem solid #e5e5e5;
   }
   &-logo {
     padding-bottom: 6rem;
@@ -45,52 +46,8 @@
     .list {
       &-item {
         &:not(:nth-child(2)) {
-          padding-left: 3rem;
-        }
-        &:nth-child(1) {
           a {
-            &::before {
-              content: "\e901";
-            }
-          }
-        }
-        &:last-child {
-          a {
-            color: #00199f;
-            &::before {
-              content: "\e902";
-              font-size: 1.4rem;
-            }
-          }
-        }
-        a {
-          &::before {
-            top: 0;
-            left: 0;
-            color: #8a8a8a;
-            display: block;
-            font-size: 1.8rem;
-            position: absolute;
-            font-family: "iconfont";
-          }
-        }
-        .box {
-          a {
-            position: relative;
             padding-left: 3rem;
-            &:first-child {
-              &::before {
-                content: "\e903";
-              }
-            }
-            &:last-child {
-              margin-left: 2rem;
-              &:last-child {
-                &::before {
-                  content: "\e904";
-                }
-              }
-            }
           }
         }
       }
@@ -126,23 +83,6 @@
       }
     }
   }
-  .list {
-    &-item {
-      position: relative;
-      &:not(:last-child) {
-        padding-bottom: 2rem;
-      }
-      a {
-        display: block;
-        font-size: 1.6rem;
-        line-height: 2.4rem;
-      }
-      .box {
-        flex-wrap: wrap;
-        @include flex;
-      }
-    }
-  }
   &-bottom {
     padding: 1.2rem 0;
     &-social {
@@ -168,6 +108,29 @@
             }
           }
         }
+      }
+    }
+  }
+  .list {
+    &-item {
+      position: relative;
+      &:not(:last-child) {
+        padding-bottom: 2rem;
+      }
+      a {
+        display: block;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        @include min(1201px) {
+          &:hover {
+            color: $color-third;
+          }
+        }
+      }
+      .box {
+        gap: 2rem;
+        flex-wrap: wrap;
+        @include flex;
       }
     }
   }
