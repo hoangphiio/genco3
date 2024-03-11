@@ -70,3 +70,8 @@ img {
   overscroll-behavior: none;
   -webkit-overflow-scrolling: none;
 }
+
+::selection {
+  color: $color-white;
+  background: $color-third;
+}

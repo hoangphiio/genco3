@@ -19,14 +19,16 @@
       @include max(1200px) {
         width: 90%;
       }
-      @include max(767px){
+      @include max(767px) {
         padding: 2rem;
       }
     }
   }
   &-title {
-    font-weight: 600;
-    font-size: 1.6rem;
+    h3 {
+      font-weight: 600;
+      font-size: 1.6rem;
+    }
   }
   &-close {
     z-index: 3;
@@ -146,7 +148,7 @@
       margin: 0 -1rem;
       flex-wrap: wrap;
       @include flex;
-      @include max(767px){
+      @include max(767px) {
         gap: 1.2rem;
       }
     }

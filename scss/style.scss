@@ -7,10 +7,10 @@
 
 // core
 @import "./core/mixin";
-@import "./core/reset";
-@import "./core/base";
-@import "./core/animation";
 @import "./core/variable";
+@import "./core/animation";
+@import "./core/base";
+@import "./core/reset";
 
 // component
 @import "./component/footer";
