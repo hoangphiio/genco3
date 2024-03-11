@@ -8,24 +8,11 @@
   }
   &-list {
     display: block;
-  }
-  &-item {
-    display: inline-block;
-    white-space: nowrap;
-    animation: marquee 20s linear infinite;
-    @include min(1201px) {
-      &:hover {
-        animation-play-state: paused;
-      }
-    }
     span {
-      display: block;
+      display: inline-block;
       padding: 0.45rem;
       font-weight: 600;
       color: $color-white;
     }
-  }
-  .header-bar {
-    top: 5.5rem;
   }
 }

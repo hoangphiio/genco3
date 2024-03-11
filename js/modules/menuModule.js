@@ -1,6 +1,6 @@
 export default function menuModule() {
   const body = document.querySelector("body");
-  const overlay = document.querySelector(".overlay");
+  const overlay = document.querySelector(".overlay-menu");
   const menuBtn = document.querySelector(".header-bar");
   const menuItems = document.querySelector(".header-mobile");
   const expandBtn = document.querySelectorAll(".expand");
@@ -11,7 +11,6 @@ export default function menuModule() {
     overlay.classList.toggle("active");
     menuBtn.classList.toggle("open");
     menuItems.classList.toggle("open");
-    overlay.onclick = closeMenu;
     if (searchForm.classList.contains("active")) {
       searchForm.classList.remove("active");
       overlay.classList.toggle("open");
@@ -20,9 +19,7 @@ export default function menuModule() {
   }
 
   function closeMenu() {
-    expandBtn.forEach((btnSub) => {
-      btnSub.classList.remove("open");
-    });
+    expandBtn.forEach((btnSub) => btnSub.classList.remove("open"));
   }
 
   function handleKeyDown(event) {
@@ -34,7 +31,7 @@ export default function menuModule() {
   }
 
   function handleClick(event) {
-    const target = event.target;
+    const { target } = event;
     const its_menu = target === menuItems || menuItems.contains(target);
     const its_hamburger = target === menuBtn;
     const menu_is_active = menuItems.classList.contains("open");
@@ -44,10 +41,11 @@ export default function menuModule() {
   }
 
   function handleScroll() {
+    const header = document.querySelector(".header");
     if (window.pageYOffset > 40) {
-      $(".header").addClass("in");
+      header.classList.add("in");
     } else {
-      $(".header").removeClass("in");
+      header.classList.remove("in");
     }
   }
 
@@ -57,15 +55,13 @@ export default function menuModule() {
   });
 
   expandBtn.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      btn.classList.toggle("open");
-      $(this).next(".menu-box").stop().slideToggle();
+    btn.addEventListener("click", function () {
+      this.classList.toggle("open");
+      this.nextElementSibling.classList.toggle("open");
     });
   });
 
   window.addEventListener("keydown", handleKeyDown);
-
   document.addEventListener("click", handleClick);
-
   window.addEventListener("scroll", handleScroll);
 }

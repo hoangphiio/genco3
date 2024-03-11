@@ -1,0 +1,242 @@
+.form {
+  &-top {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem solid #e5e5e5;
+    @include flex-btw;
+  }
+  &-popup {
+    &-background {
+      width: 80%;
+      margin: 1rem;
+      padding: 3rem;
+      position: relative;
+      overflow: hidden auto;
+      flex-direction: column;
+      background: $color-white;
+      box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
+      @include flex;
+      @include max(1200px) {
+        width: 90%;
+      }
+      @include max(767px){
+        padding: 2rem;
+      }
+    }
+  }
+  &-title {
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+  &-close {
+    z-index: 3;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    @include min(1201px) {
+      &:hover {
+        .ic-close {
+          &::before {
+            color: $color-third;
+          }
+        }
+      }
+    }
+    .ic-close {
+      display: block;
+      &::before {
+        font-size: 2.4rem;
+      }
+    }
+  }
+  &-contact {
+    &-box {
+      margin: 0 -2rem;
+      @include flex;
+      @include max(991px) {
+        margin: 0 -1rem;
+      }
+      @include max(767px) {
+        gap: 2rem;
+        flex-direction: column;
+      }
+    }
+    &-col {
+      padding: 0 2rem;
+      width: calc(100% / 2);
+      @include max(991px) {
+        padding: 0 1rem;
+      }
+      @include max(767px) {
+        width: 100%;
+      }
+    }
+  }
+  &-overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: fixed;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.6);
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    flex-direction: column;
+    @include flex-ct;
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.3s 0s, visibility 0s 0s;
+    }
+  }
+}
+.contact {
+  &-inner {
+    gap: 2rem;
+    height: 100%;
+    flex-direction: column;
+    @include flex;
+    > a {
+      color: #00199f;
+      @include min(1201px) {
+        &:hover {
+          color: $color-third;
+        }
+      }
+      @include max(991px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  &-img {
+    overflow: hidden;
+    position: relative;
+    padding-top: calc((312 / 610) * 100%);
+    img {
+      @include imgCover;
+    }
+  }
+  h3.company {
+    color: #262626;
+    font-weight: 500;
+    font-size: 1.8rem;
+  }
+  p.position {
+    font-size: 1.6rem;
+    @include max(991px) {
+      font-size: 1.4rem;
+    }
+  }
+}
+.group {
+  &-title {
+    margin-bottom: 2rem;
+  }
+  &-block {
+    gap: 1.2rem;
+    flex-direction: column;
+    @include flex;
+  }
+  &-row {
+    &.group-box {
+      margin: 0 -1rem;
+      flex-wrap: wrap;
+      @include flex;
+      @include max(767px){
+        gap: 1.2rem;
+      }
+    }
+    &-col {
+      label,
+      textarea,
+      input {
+        width: 100%;
+        outline: none;
+        display: block;
+        cursor: default;
+      }
+      input,
+      textarea {
+        padding: 0.8rem;
+        font-size: 1.4rem;
+        font-family: "Be VietNam Pro";
+        @include min(1201px) {
+          &:hover {
+            border-color: $color-third;
+          }
+        }
+        &:focus-visible {
+          border-color: $color-third;
+        }
+      }
+      input {
+        border: 0;
+        border-bottom: 0.1rem solid #d3d3d3;
+      }
+      label {
+        color: #424d54;
+        font-size: 1.6rem;
+        padding-bottom: 0.8rem;
+        @include max(991px) {
+          font-size: 1.4rem;
+        }
+        span {
+          color: $color-third;
+        }
+      }
+      textarea {
+        resize: vertical;
+        min-height: 10rem;
+        border-radius: 0.5rem;
+        border: 0.1rem solid #d3d3d3;
+      }
+    }
+    .col-md-6 {
+      padding: 0 1rem;
+      width: calc(100% / 2);
+      @include max(767px) {
+        width: 100%;
+      }
+    }
+    .col-md-12 {
+      width: 100%;
+    }
+  }
+  &-button {
+    margin-top: 1.8rem;
+  }
+}
+.attach {
+  &-file {
+    gap: 1rem;
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    background: #f5f9ff;
+    border: 0.1rem dashed #2191eb;
+    cursor: pointer;
+    @include flex-ct;
+    &-img {
+      width: 5rem;
+      height: 5rem;
+      .ic-upload {
+        display: block;
+        &::before {
+          font-size: 5rem;
+        }
+      }
+    }
+    &-mb {
+      > span {
+        display: block;
+        font-size: 1.6rem;
+        > span {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
