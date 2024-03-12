@@ -27,41 +27,6 @@
     position: absolute;
     transition: 0.4s ease-in-out; }
 
-.btn-contact {
-  gap: 0.8rem;
-  overflow: hidden;
-  background: #fff;
-  line-height: 2rem;
-  width: fit-content;
-  border-radius: 2rem;
-  padding: 0.891rem 1.845rem;
-  border: 0.1rem solid #2191eb;
-  box-shadow: 0 0.2rem 0.4rem rgba(0, 106, 191, 0.3);
-  cursor: pointer;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-align-items: center; }
-  @media screen and (min-width: 1201px) {
-    .btn-contact:hover i {
-      transform: translateX(3rem) scale(1.1); }
-    .btn-contact:hover span {
-      transform: translateX(10rem); } }
-  .btn-contact span {
-    font-size: 1.6rem;
-    transition: 0.4s ease-in-out; }
-    @media screen and (max-width: 1200px) {
-      .btn-contact span {
-        font-size: 1.4rem; } }
-  .btn-contact i {
-    transition: 0.4s ease-in-out; }
-    .btn-contact i::before {
-      font-size: 2rem; }
-
 .btn {
   cursor: pointer; }
   .btn-hover {
@@ -92,11 +57,45 @@
     font-size: 1.6rem;
     position: relative;
     text-align: center;
-    color: #fff;
+    color: white;
     padding: 1rem 1.2rem;
     text-transform: uppercase;
     transition: 0.4s ease-in-out;
     cursor: pointer; }
+  .btn-contact {
+    gap: 0.8rem;
+    overflow: hidden;
+    background: #fff;
+    line-height: 2rem;
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 0.891rem 1.845rem;
+    border: 0.1rem solid #2191eb;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 106, 191, 0.3);
+    cursor: pointer;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-align-items: center; }
+    @media screen and (min-width: 1201px) {
+      .btn-contact:hover i {
+        transform: translateX(3rem) scale(1.1); }
+      .btn-contact:hover span {
+        transform: translateX(10rem); } }
+    .btn-contact span {
+      font-size: 1.6rem;
+      transition: 0.4s ease-in-out; }
+      @media screen and (max-width: 1200px) {
+        .btn-contact span {
+          font-size: 1.4rem; } }
+    .btn-contact i {
+      transition: 0.4s ease-in-out; }
+      .btn-contact i::before {
+        font-size: 2rem; }
 
 .overlay {
   left: 0;
@@ -195,6 +194,7 @@
   margin: 1rem;
   padding: 3rem;
   position: relative;
+  background: white;
   overflow: hidden auto;
   flex-direction: column;
   box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
@@ -308,7 +308,7 @@ img {
   -webkit-overflow-scrolling: none; }
 
 ::selection {
-  color: #fff;
+  color: white;
   background: #df0024; }
 
 html,
@@ -1018,7 +1018,7 @@ table {
       display: inline-block;
       padding: 0.45rem;
       font-weight: 600;
-      color: #fff; }
+      color: whiteƒ; }
 
 .select {
   width: fit-content;

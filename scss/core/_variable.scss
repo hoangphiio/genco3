@@ -1,8 +1,6 @@
 $color-fisrt: #2191eb;
 $color-second: #0b325d;
 $color-third: #df0024;
-$color-black: #000;
-$color-white: #fff;
 
 .dot {
   padding-left: 1.5rem;
@@ -33,42 +31,6 @@ $color-white: #fff;
     background: #a3a3a3;
     position: absolute;
     transition: 0.4s ease-in-out;
-  }
-}
-.btn-contact {
-  gap: 0.8rem;
-  overflow: hidden;
-  background: #fff;
-  line-height: 2rem;
-  width: fit-content;
-  border-radius: 2rem;
-  padding: 0.891rem 1.845rem;
-  border: 0.1rem solid #2191eb;
-  box-shadow: 0 0.2rem 0.4rem rgba(0, 106, 191, 0.3);
-  cursor: pointer;
-  @include flex-al;
-  @include min(1201px) {
-    &:hover {
-      i {
-        transform: translateX(3rem) scale(1.1);
-      }
-      span {
-        transform: translateX(10rem);
-      }
-    }
-  }
-  span {
-    font-size: 1.6rem;
-    transition: 0.4s ease-in-out;
-    @include max(1200px) {
-      font-size: 1.4rem;
-    }
-  }
-  i {
-    transition: 0.4s ease-in-out;
-    &::before {
-      font-size: 2rem;
-    }
   }
 }
 .btn {
@@ -107,11 +69,47 @@ $color-white: #fff;
     font-size: 1.6rem;
     position: relative;
     text-align: center;
-    color: $color-white;
+    color: white;
     padding: 1rem 1.2rem;
     text-transform: uppercase;
     transition: 0.4s ease-in-out;
     cursor: pointer;
+  }
+  &-contact {
+    gap: 0.8rem;
+    overflow: hidden;
+    background: #fff;
+    line-height: 2rem;
+    width: fit-content;
+    border-radius: 2rem;
+    padding: 0.891rem 1.845rem;
+    border: 0.1rem solid #2191eb;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 106, 191, 0.3);
+    cursor: pointer;
+    @include flex-al;
+    @include min(1201px) {
+      &:hover {
+        i {
+          transform: translateX(3rem) scale(1.1);
+        }
+        span {
+          transform: translateX(10rem);
+        }
+      }
+    }
+    span {
+      font-size: 1.6rem;
+      transition: 0.4s ease-in-out;
+      @include max(1200px) {
+        font-size: 1.4rem;
+      }
+    }
+    i {
+      transition: 0.4s ease-in-out;
+      &::before {
+        font-size: 2rem;
+      }
+    }
   }
 }
 .overlay {
@@ -242,6 +240,7 @@ $color-white: #fff;
   margin: 1rem;
   padding: 3rem;
   position: relative;
+  background: white;
   overflow: hidden auto;
   flex-direction: column;
   box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
