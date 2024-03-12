@@ -227,3 +227,26 @@ $color-white: #fff;
     background: $color-third;
   }
 }
+.trademark {
+  .evn {
+    font-weight: 700;
+    color: $color-second;
+  }
+  .genco3 {
+    font-weight: 600;
+    font-style: italic;
+    color: $color-third;
+  }
+}
+.form-background {
+  margin: 1rem;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden auto;
+  flex-direction: column;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
+  @include flex;
+  @include max(767px) {
+    padding: 2rem;
+  }
+}
