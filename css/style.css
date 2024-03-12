@@ -1015,10 +1015,10 @@ table {
   .marquee-list {
     display: block; }
     .marquee-list span {
-      display: inline-block;
+      color: white;
       padding: 0.45rem;
       font-weight: 600;
-      color: whiteƒ; }
+      display: inline-block; }
 
 .select {
   width: fit-content;
