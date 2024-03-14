@@ -138,6 +138,9 @@
     line-height: 1.6rem;
     font-size: 1.3rem;
     cursor: default;
+    @include max(627px){
+      text-align: center;
+    }
   }
   .social {
     gap: 2rem;
@@ -167,7 +170,7 @@
         line-height: 2.4rem;
         @include min(1201px) {
           &:hover {
-            color: $color-third;
+            color: $red;
           }
         }
         @include max(1200px) {

@@ -31,7 +31,7 @@
       &:hover {
         .ic-close {
           &::before {
-            color: $color-third;
+            color: $red;
           }
         }
       }
@@ -98,7 +98,7 @@
       color: #00199f;
       @include min(1201px) {
         &:hover {
-          color: $color-third;
+          color: $red;
         }
       }
       @include max(991px) {
@@ -160,11 +160,11 @@
         font-family: "Be VietNam Pro";
         @include min(1201px) {
           &:hover {
-            border-color: $color-third;
+            border-color: $red;
           }
         }
         &:focus-visible {
-          border-color: $color-third;
+          border-color: $red;
         }
       }
       input {
@@ -179,7 +179,7 @@
           font-size: 1.4rem;
         }
         span {
-          color: $color-third;
+          color: $red;
         }
       }
       textarea {

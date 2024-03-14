@@ -13,12 +13,12 @@
     cursor: pointer;
     @include min(1201px) {
       &:hover {
-        border-color: $color-third;
+        border-color: $red;
         &::before {
-          color: $color-third;
+          color: $red;
         }
         > span {
-          color: $color-third;
+          color: $red;
         }
       }
     }
@@ -103,6 +103,7 @@
     }
     &-trigger {
       padding: 0.8rem 1rem;
+      padding-right: 4rem;
     }
   }
   &-options {

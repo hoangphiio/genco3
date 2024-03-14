@@ -1,6 +1,6 @@
-$color-fisrt: #2191eb;
-$color-second: #0b325d;
-$color-third: #df0024;
+$blue-blur: #2191eb;
+$blue-dark: #0b325d;
+$red: #df0024;
 
 .dot {
   padding-left: 1.5rem;
@@ -11,10 +11,10 @@ $color-third: #df0024;
   @include min(1201px) {
     &:hover {
       &::before {
-        background-color: $color-third;
+        background-color: $red;
       }
       a {
-        color: $color-third;
+        color: $red;
       }
     }
   }
@@ -198,6 +198,7 @@ $color-third: #df0024;
     width: calc(100% + 1.6rem);
     @include min(1201px) {
       &:hover {
+        color: $red;
         background: rgba(0, 0, 0, 0.05);
       }
     }
@@ -207,7 +208,7 @@ $color-third: #df0024;
   font-size: 2.4rem;
   width: fit-content;
   position: relative;
-  color: $color-third;
+  color: $red;
   font-family: "Oswald";
   text-transform: uppercase;
   @include max(991px) {
@@ -222,18 +223,18 @@ $color-third: #df0024;
     margin: auto;
     height: 0.2rem;
     position: absolute;
-    background: $color-third;
+    background: $red;
   }
 }
 .trademark {
   .evn {
     font-weight: 700;
-    color: $color-second;
+    color: $blue-dark;
   }
   .genco3 {
     font-weight: 600;
     font-style: italic;
-    color: $color-third;
+    color: $red;
   }
 }
 .form-background {

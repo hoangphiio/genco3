@@ -6,8 +6,11 @@
     }
   }
   .form-background {
-    width: 57rem;
+    width: 60rem;
     padding: 2rem;
+    @include max(767px) {
+      width: 90%;
+    }
   }
   .group {
     &-block {
