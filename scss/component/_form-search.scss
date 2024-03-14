@@ -1,0 +1,33 @@
+.form-search {
+  .select {
+    width: 100%;
+    &-list {
+      width: 100%;
+    }
+  }
+  .form-background {
+    width: 57rem;
+    padding: 2rem;
+  }
+  .group {
+    &-block {
+      gap: 2rem;
+    }
+    &-row {
+      &-col {
+        input {
+          border-radius: 0.5rem;
+          border: 0.1rem solid #d3d3d3;
+        }
+      }
+    }
+    &-button {
+      width: 12rem;
+      margin: 0 auto;
+    }
+    .btn-send {
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+  }
+}

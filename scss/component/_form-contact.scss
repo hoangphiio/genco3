@@ -8,14 +8,6 @@
   &-popup {
     &-background {
       width: 80%;
-      margin: 1rem;
-      padding: 3rem;
-      position: relative;
-      overflow: hidden auto;
-      flex-direction: column;
-      background: $color-white;
-      box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
-      @include flex;
       @include max(1200px) {
         width: 90%;
       }

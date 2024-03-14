@@ -131,6 +131,7 @@
       gap: 4rem;
     }
     > div {
+      cursor: pointer;
       position: relative;
       &:not(:last-child) {
         &:before {

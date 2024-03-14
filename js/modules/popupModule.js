@@ -6,10 +6,10 @@ export default function popupModule() {
 
   $(".btnOpenForm").on("click", function (event) {
     event.preventDefault();
-    toggleForm($(".form-popup"));
+    toggleForm($(".openContactForm"));
   });
 
-  $(".form-popup").on("click", function (event) {
+  $(".openContactForm").on("click", function (event) {
     const $this = $(this);
     if ($this.is(event.target) || $this.find(".searchClose").is(event.target)) {
       event.preventDefault();
